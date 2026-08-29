@@ -59,8 +59,8 @@ class Order(BaseModel):
 
     @property
     def net_revenue(self) -> float:
-        """Revenue booked to the brand: subtotal after discounts, before tax, less refunds."""
-        return self.subtotal_price - self.total_refunded
+        """Revenue booked to the brand: subtotal, less order discounts, less refunds, pre-tax."""
+        return self.subtotal_price - self.total_discounts - self.total_refunded
 
 
 class Address(BaseModel):

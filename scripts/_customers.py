@@ -26,7 +26,10 @@ from _scenario import (
     region_weights,
 )
 
+from meta_reporting.catalog import CATALOG, Product
 from meta_reporting.sources.meta.strategy import classify
+
+Sku = Product  # local alias — this module was written before the catalogue moved into the package
 
 # fraction of Meta-attributed new customers that land in Shopify with attribution tags intact
 ATTRIBUTION_RATE = 0.64
@@ -39,29 +42,6 @@ _FIRST_CUSTOMER_ID = 7_100_000_000
 
 # --- product catalog --------------------------------------------------------------------
 
-
-@dataclass(frozen=True, slots=True)
-class Sku:
-    sku: str
-    title: str
-    price: float
-    unit_cost: float
-    line: str  # "core" | "premium"
-    product_id: int
-
-
-CATALOG: tuple[Sku, ...] = (
-    Sku("HALO-CLEANSE-150", "Gentle Gel Cleanser 150ml", 24.0, 5.4, "core", 8101),
-    Sku("HALO-TONER-200", "Hydrating Essence Toner 200ml", 28.0, 6.1, "core", 8102),
-    Sku("HALO-NIACIN-30", "10% Niacinamide Serum 30ml", 32.0, 6.6, "core", 8103),
-    Sku("HALO-HA-30", "Hyaluronic Acid Serum 30ml", 34.0, 6.9, "core", 8104),
-    Sku("HALO-SPF-50", "Daily Mineral SPF 50", 30.0, 7.2, "core", 8105),
-    Sku("HALO-MOIST-50", "Barrier Repair Moisturiser 50ml", 38.0, 8.3, "core", 8106),
-    Sku("HALO-RETINAL-30", "Encapsulated Retinal Serum 30ml", 68.0, 12.8, "premium", 8201),
-    Sku("HALO-VITC-30", "15% Vitamin C + Ferulic 30ml", 62.0, 11.5, "premium", 8202),
-    Sku("HALO-PEPTIDE-30", "Multi-Peptide Firming Serum 30ml", 74.0, 13.9, "premium", 8203),
-    Sku("HALO-EYE-15", "Peptide Eye Concentrate 15ml", 58.0, 10.4, "premium", 8204),
-)
 _CORE = [s for s in CATALOG if s.line == "core"]
 _PREMIUM = [s for s in CATALOG if s.line == "premium"]
 

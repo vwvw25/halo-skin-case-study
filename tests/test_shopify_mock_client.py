@@ -75,9 +75,11 @@ def test_iter_orders_date_filtering() -> None:
     assert len(window) < len(ORDERS)
 
 
-def test_net_revenue_accounts_for_refunds() -> None:
+def test_net_revenue_accounts_for_discounts_and_refunds() -> None:
     refunded = next(o for o in ORDERS if o.total_refunded > 0)
-    assert refunded.net_revenue == pytest.approx(refunded.subtotal_price - refunded.total_refunded)
+    assert refunded.net_revenue == pytest.approx(
+        refunded.subtotal_price - refunded.total_discounts - refunded.total_refunded
+    )
     assert refunded.financial_status == "partially_refunded"
 
 
