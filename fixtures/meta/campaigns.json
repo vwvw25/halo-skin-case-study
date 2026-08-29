@@ -1,0 +1,72 @@
+[
+  {
+    "id": "238500000000001",
+    "name": "Prospecting \u2014 Broad",
+    "objective": "OUTCOME_SALES",
+    "status": "ACTIVE",
+    "effective_status": "ACTIVE"
+  },
+  {
+    "id": "238500000000002",
+    "name": "Prospecting \u2014 Interests (Skincare Stack)",
+    "objective": "OUTCOME_SALES",
+    "status": "ACTIVE",
+    "effective_status": "ACTIVE"
+  },
+  {
+    "id": "238500000000003",
+    "name": "LAL 1% \u2014 Purchasers",
+    "objective": "OUTCOME_SALES",
+    "status": "ACTIVE",
+    "effective_status": "ACTIVE"
+  },
+  {
+    "id": "238500000000004",
+    "name": "LAL 3% \u2014 Purchasers",
+    "objective": "OUTCOME_SALES",
+    "status": "ACTIVE",
+    "effective_status": "ACTIVE"
+  },
+  {
+    "id": "238500000000005",
+    "name": "LAL 1% \u2014 High-AOV Purchasers",
+    "objective": "OUTCOME_SALES",
+    "status": "ACTIVE",
+    "effective_status": "ACTIVE"
+  },
+  {
+    "id": "238500000000006",
+    "name": "Advantage+ Shopping",
+    "objective": "OUTCOME_SALES",
+    "status": "ACTIVE",
+    "effective_status": "ACTIVE"
+  },
+  {
+    "id": "238500000000007",
+    "name": "Retargeting \u2014 14d ATC/VC",
+    "objective": "OUTCOME_SALES",
+    "status": "ACTIVE",
+    "effective_status": "ACTIVE"
+  },
+  {
+    "id": "238500000000008",
+    "name": "Retargeting \u2014 180d All Visitors",
+    "objective": "OUTCOME_SALES",
+    "status": "ACTIVE",
+    "effective_status": "ACTIVE"
+  },
+  {
+    "id": "238500000000009",
+    "name": "Creative Testing \u2014 TOF",
+    "objective": "OUTCOME_SALES",
+    "status": "ACTIVE",
+    "effective_status": "ACTIVE"
+  },
+  {
+    "id": "238500000000010",
+    "name": "Brand \u2014 Video Views",
+    "objective": "OUTCOME_AWARENESS",
+    "status": "ACTIVE",
+    "effective_status": "ACTIVE"
+  }
+]
