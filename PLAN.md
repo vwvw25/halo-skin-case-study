@@ -20,7 +20,8 @@ and attributes it back to the campaign / audience / placement that acquired each
 a weekly operational PDF, a monthly strategic PDF, and an always-on dashboard.
 
 Portfolio signal: this is a production-shaped integration and a genuine cross-source analytical
-model, not a notebook.
+model, not a notebook. See [docs/data-sources.md](docs/data-sources.md) for how the
+built-for-real-APIs / runs-on-mock-data architecture works.
 
 ---
 

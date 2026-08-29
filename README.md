@@ -15,7 +15,8 @@ and produces:
 
 It is built against the real API contracts but ships with **mock data providers**, so it runs
 end to end with no credentials. Point it at a real ad account and Shopify store by setting a few
-environment variables.
+environment variables. See [docs/data-sources.md](docs/data-sources.md) for how the
+mock/real seam works and what it does and doesn't guarantee.
 
 > **Status:** early build. See [PLAN.md](PLAN.md) for the full design and the milestone list.
 
