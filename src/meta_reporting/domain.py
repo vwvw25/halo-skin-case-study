@@ -27,11 +27,16 @@ PAYMENT_FEE_FLAT: Final = 0.30
 
 # --- target cohort ----------------------------------------------------------------------
 
-TARGET_MIN_ORDERS_90D: Final = 3
+TARGET_WINDOW_DAYS: Final = 90
+TARGET_MIN_ORDERS: Final = 3
 TARGET_MIN_AOV: Final = 62.0
 TARGET_REQUIRE_PREMIUM_SKU: Final = True
-"""Halo Skin's high-value customer: >= 3 orders in the first 90 days, average order value at or
-above TARGET_MIN_AOV, and at least one purchase from the premium SKU line."""
+"""Halo Skin's high-value customer, judged on the first 90 days: at least 3 orders, average
+order value at or above TARGET_MIN_AOV, and at least one purchase from the premium SKU line."""
+
+TARGET_EARLY_SIGNAL_DAYS: Final = 30
+"""For customers younger than the 90-day window, target-cohort membership is *predicted* from
+behaviour in the first 30 days (see transform.target_cohort)."""
 
 # --- health lines (for report styling / callouts) --------------------------------------
 

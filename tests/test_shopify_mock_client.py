@@ -8,7 +8,7 @@ import pytest
 
 from meta_reporting.domain import (
     TARGET_MIN_AOV,
-    TARGET_MIN_ORDERS_90D,
+    TARGET_MIN_ORDERS,
 )
 from meta_reporting.sources.shopify import (
     Customer,
@@ -34,7 +34,7 @@ def _is_target(cust: Customer) -> bool:
         return False
     acq = orders[0].order_date
     in_90 = [o for o in orders if o.order_date <= acq + timedelta(days=90)]
-    if len(in_90) < TARGET_MIN_ORDERS_90D:
+    if len(in_90) < TARGET_MIN_ORDERS:
         return False
     if sum(o.net_revenue for o in in_90) / len(in_90) < TARGET_MIN_AOV:
         return False

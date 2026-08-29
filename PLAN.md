@@ -291,11 +291,22 @@ No secrets committed; `.env.example` documents everything.
 
 ---
 
-## 13. Open questions
+## 13. Decisions made during the build
 
-- Repo name — `meta-ads-ltv-reporting`?
-- Target-cohort thresholds (AOV cutoff, premium-SKU rule) — set during milestone 3 fixture design;
-  aiming for top ~15–25% of customers by value.
+- **Repo:** `halo-skin-case-study` (github.com/vwvw25/halo-skin-case-study).
+- **Target-cohort definition:** ≥3 orders in first 90 days, AOV ≥ $62, ≥1 premium SKU — lands
+  ~20% of customers. Constants in `meta_reporting/domain.py`.
+- **Margin model:** per-SKU COGS from `meta_reporting/catalog.py`, plus a flat shipping +
+  payment-fee stack in `domain.py`.
+- **Maturation curve:** empirical pooled — mean cumulative CM per customer by tenure month over
+  the whole order history, with a small decayed tail past the last well-observed month. No
+  parametric retention model (more defensible, easier to show). BG/NBD noted as a possible
+  upgrade only.
+- **Cohort projection:** multiplicative — `realized_cm * curve(12) / curve(observed_age)` — so a
+  cohort keeps its over/under-index through the projection.
+- **Attribution rate:** 0.82 (18% of Meta-acquired customers untagged); measured CAC is "cost
+  per attributed new customer" and runs slightly high — appendix notes this.
+
+## Still open
+
 - Dashboard: confirm Vercel deploy (vs local-only + screenshots in README).
-- Margin model detail for CM-LTV — flat blended margin % vs per-SKU. Suggest per-SKU (premium vs
-  core) since the target cohort is partly defined by premium purchases.

@@ -50,7 +50,7 @@ you need:
 | 3. Shopify source — orders/customers, real + mock client, seeded fixtures | ✅ |
 | 4. Ingest layer — sources → tidy pandas frames, per-order contribution margin | ✅ |
 | 5. Transform — maturation curve, cohort CM-LTV (realized + projected), LTV:CAC + payback | ✅ |
-| 6. Transform — weekly acquisition topline, target-cohort capture (predicted + realized) | ⬜ |
+| 6. Transform — weekly acquisition topline, target-cohort capture (predicted + realized) | ✅ |
 | 7–8. Weekly & monthly PDF reports | ⬜ |
 | 9–10. Emit, delivery, pipeline wiring | ⬜ |
 | 11. Next.js dashboard | ⬜ |
