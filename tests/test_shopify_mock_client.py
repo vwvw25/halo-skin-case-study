@@ -42,7 +42,7 @@ def _is_target(cust: Customer) -> bool:
 
 
 def test_customer_count_in_expected_band() -> None:
-    assert 14_000 <= len(CUSTOMERS) <= 18_000
+    assert 18_000 <= len(CUSTOMERS) <= 24_000
 
 
 def test_every_customer_has_full_attribution() -> None:

@@ -46,7 +46,7 @@ def _client(session: FakeSession) -> ShopifyClient:
     return ShopifyClient(
         store="halo-skin.myshopify.com",
         admin_token="shpat_x",
-        session=session,  # type: ignore[arg-type]
+        session=session,
         backoff_base=0.0,
     )
 

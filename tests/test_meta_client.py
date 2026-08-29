@@ -46,7 +46,7 @@ def _client(session: FakeSession, **kw: Any) -> MetaClient:
     return MetaClient(
         access_token="tok",
         ad_account_id="123",
-        session=session,  # type: ignore[arg-type]
+        session=session,
         backoff_base=0.0,
         **kw,
     )

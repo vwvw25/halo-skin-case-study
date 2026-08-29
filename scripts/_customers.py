@@ -31,8 +31,10 @@ from meta_reporting.sources.meta.strategy import classify
 
 Sku = Product  # local alias — this module was written before the catalogue moved into the package
 
-# fraction of Meta-attributed new customers that land in Shopify with attribution tags intact
-ATTRIBUTION_RATE = 0.64
+# fraction of Meta-acquired customers that land in Shopify with attribution tags intact
+# (UTM capture + post-purchase survey). The ~18% gap inflates measured CAC vs true CAC — the
+# report appendix notes this.
+ATTRIBUTION_RATE = 0.82
 # nudges the share of customers meeting the target-cohort definition toward ~20%
 _TARGET_TUNE = 1.45
 
