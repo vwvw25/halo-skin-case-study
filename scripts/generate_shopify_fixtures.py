@@ -93,8 +93,8 @@ def order_json(order: GenOrder) -> dict[str, object]:
 
 def _write_gz(name: str, rows: list[dict[str, object]]) -> None:
     path = FIXTURES / f"{name}.json.gz"
-    with gzip.open(path, "wt", encoding="utf-8") as fh:
-        json.dump(rows, fh, separators=(",", ":"))
+    payload = json.dumps(rows, separators=(",", ":")).encode("utf-8")
+    path.write_bytes(gzip.compress(payload, mtime=0))  # mtime=0 -> byte-stable across runs
     print(
         f"  fixtures/shopify/{name}.json.gz  ({len(rows)} rows, {path.stat().st_size // 1024} KB)"
     )
