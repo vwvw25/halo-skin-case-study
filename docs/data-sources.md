@@ -56,6 +56,25 @@ It is not a simplified stand-in that would need rewriting for real use. Specific
    encoding, cursor pagination, rate-limit/backoff handling, and error-envelope parsing are all
    implemented and covered by tests that feed the client synthetic/recorded responses.
 
+## Joining Meta to Shopify
+
+Meta knows what was spent; Shopify knows what those customers went on to be worth. The join key
+is per-customer acquisition attribution, which is **not** a native Shopify field. Halo Skin (like
+most DTC skincare brands) captures it from UTM parameters and a post-purchase "how did you hear
+about us?" survey, then writes it onto the customer record as structured tags:
+
+```
+acq_campaign:238500000000003, acq_date:2025-07-14, acq_strategy:lookalike, age:35-44, gender:female
+```
+
+`Customer.attrs()` parses those back out. Age and gender come from the same survey — also not
+native Shopify. The real `ShopifyClient` reads whatever tags a live store actually has; the mock
+fixtures always carry the full set.
+
+Contribution-margin LTV needs per-SKU cost, which lives in the product catalog
+(`scripts/_customers.py::CATALOG`) rather than in either API. A live deployment would source COGS
+from the brand's finance system or Shopify cost-per-item.
+
 ## The honest caveat
 
 The real clients are tested **to the documented contract and against fixtures**, not against a

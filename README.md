@@ -47,7 +47,7 @@ you need:
 |---|---|
 | 1. Scaffold (`pyproject`, config, CI) | ✅ |
 | 2. Meta source — real + mock client, Insights types, seeded fixtures | ✅ |
-| 3. Shopify source — orders/customers, mock client, seeded fixtures | ⬜ |
+| 3. Shopify source — orders/customers, real + mock client, seeded fixtures | ✅ |
 | 4–6. Ingest & transform (CAC, cohorts, LTV:CAC, target cohort) | ⬜ |
 | 7–8. Weekly & monthly PDF reports | ⬜ |
 | 9–10. Emit, delivery, pipeline wiring | ⬜ |
