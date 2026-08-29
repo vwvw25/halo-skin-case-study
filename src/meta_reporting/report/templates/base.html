@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{ ctx.brand }} — {{ ctx.cadence }} report</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="masthead">
+    <div>
+        <div class="wordmark">Halo<span class="dot">.</span>Skin</div>
+        <div class="report-kind">{{ report_kind }}</div>
+        <div class="period">{{ ctx.period_label }} <small>{{ ctx.comparison_label }}</small></div>
+    </div>
+    <div class="meta">
+        Prepared by Performance<br>
+        Generated {{ ctx.generated_on.strftime('%-d %B %Y') }}<br>
+        Meta Marketing API × Shopify
+    </div>
+</header>
+
+<section class="kpis">
+    {% for kpi in ctx.kpis %}
+    <div class="kpi">
+        <div class="label">{{ kpi.label }}</div>
+        <div class="value">{{ kpi.value }}</div>
+        <div class="delta {{ kpi.is_good }}">{{ kpi.delta_label }}</div>
+    </div>
+    {% endfor %}
+</section>
+
+{% block body %}{% endblock %}
+
+{% if ctx.narrative %}
+<div class="callout read">
+    <h3>What moved</h3>
+    <ul>{% for line in ctx.narrative %}<li>{{ line }}</li>{% endfor %}</ul>
+</div>
+{% endif %}
+
+{% if ctx.recommendations %}
+<div class="callout act">
+    <h3>Recommended actions</h3>
+    <ul>{% for line in ctx.recommendations %}<li>{{ line }}</li>{% endfor %}</ul>
+</div>
+{% endif %}
+
+{% block appendix %}{% endblock %}
+
+</body>
+</html>

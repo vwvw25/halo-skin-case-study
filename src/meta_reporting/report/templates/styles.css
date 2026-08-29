@@ -1,0 +1,91 @@
+@page {
+    size: A4;
+    margin: 20mm 16mm 18mm 16mm;
+    @bottom-left {
+        content: "Halo Skin — confidential";
+        font: 8pt "Helvetica Neue", Arial, sans-serif;
+        color: #8b949e;
+    }
+    @bottom-right {
+        content: "Page " counter(page) " / " counter(pages);
+        font: 8pt "Helvetica Neue", Arial, sans-serif;
+        color: #8b949e;
+    }
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.5;
+    color: #1f2328;
+    margin: 0;
+}
+
+h1, h2, h3 { color: #1f2328; margin: 0; font-weight: 600; }
+h1 { font-size: 19pt; letter-spacing: -0.01em; }
+h2 { font-size: 12.5pt; margin: 18pt 0 8pt; padding-bottom: 4pt; border-bottom: 1.5pt solid #0f766e; }
+h3 { font-size: 10pt; margin: 12pt 0 4pt; color: #57606a; }
+p { margin: 0 0 6pt; }
+a { color: #0f766e; }
+
+/* cover / masthead */
+.masthead {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2.5pt solid #1f2328;
+    padding-bottom: 10pt;
+    margin-bottom: 6pt;
+}
+.wordmark { font-size: 15pt; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+.wordmark .dot { color: #0f766e; }
+.masthead .meta { text-align: right; font-size: 8.5pt; color: #57606a; }
+.report-kind { font-size: 8.5pt; letter-spacing: 0.18em; text-transform: uppercase; color: #0f766e; font-weight: 600; }
+.period { font-size: 13pt; font-weight: 600; margin-top: 2pt; }
+.period small { font-weight: 400; color: #8b949e; font-size: 9pt; }
+
+/* KPI row */
+.kpis { display: flex; gap: 6pt; margin: 12pt 0 4pt; }
+.kpi {
+    flex: 1;
+    border: 0.75pt solid #e6e8eb;
+    border-top: 2.5pt solid #0f766e;
+    border-radius: 2pt;
+    padding: 7pt 8pt 8pt;
+}
+.kpi .label { font-size: 7.5pt; text-transform: uppercase; letter-spacing: 0.04em; color: #8b949e; min-height: 2.2em; }
+.kpi .value { font-size: 15pt; font-weight: 600; margin-top: 2pt; }
+.kpi .delta { font-size: 8pt; margin-top: 1pt; }
+.delta.good { color: #0f766e; }
+.delta.bad { color: #b42318; }
+.delta.neutral { color: #8b949e; }
+
+/* charts */
+.chart { margin: 6pt 0 10pt; }
+.chart svg { width: 100%; height: auto; }
+.chart .caption { font-size: 8pt; color: #8b949e; margin-top: -2pt; }
+
+/* tables */
+table { width: 100%; border-collapse: collapse; margin: 4pt 0 10pt; font-size: 8.5pt; }
+th {
+    text-align: left; padding: 4pt 6pt; border-bottom: 1pt solid #1f2328;
+    font-size: 7.5pt; text-transform: uppercase; letter-spacing: 0.03em; color: #57606a;
+}
+td { padding: 3.5pt 6pt; border-bottom: 0.5pt solid #e6e8eb; }
+td:not(:first-child), th:not(:first-child) { text-align: right; }
+tbody tr:last-child td { border-bottom: 1pt solid #1f2328; }
+
+/* callout boxes */
+.callout { border-radius: 2pt; padding: 8pt 10pt; margin: 6pt 0 10pt; }
+.callout ul { margin: 0; padding-left: 14pt; }
+.callout li { margin: 2pt 0; }
+.callout.read { background: #f6f8fa; border-left: 2.5pt solid #8b949e; }
+.callout.act { background: #f0fdfa; border-left: 2.5pt solid #0f766e; }
+.callout h3 { margin-top: 0; }
+
+.two-col { display: flex; gap: 12pt; }
+.two-col > * { flex: 1; }
+.note { font-size: 8pt; color: #8b949e; }
+.page-break { break-before: page; }

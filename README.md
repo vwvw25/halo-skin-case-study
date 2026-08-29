@@ -28,6 +28,21 @@ uv run halo-report weekly     # fully mock, no credentials needed
 uv run pytest
 ```
 
+PDF rendering uses WeasyPrint, which needs Pango/Cairo:
+
+```bash
+# macOS
+brew install pango gdk-pixbuf
+# Debian/Ubuntu
+sudo apt-get install libpango-1.0-0 libpangoft2-1.0-0
+```
+
+Then generate the sample reports (into `reports/`):
+
+```bash
+uv run python -m meta_reporting.report   # or use the pipeline once wired (milestone 10)
+```
+
 ## Configuration
 
 Everything defaults to `mock`. Copy [`.env.example`](.env.example) to `.env` and set only what
@@ -51,7 +66,8 @@ you need:
 | 4. Ingest layer — sources → tidy pandas frames, per-order contribution margin | ✅ |
 | 5. Transform — maturation curve, cohort CM-LTV (realized + projected), LTV:CAC + payback | ✅ |
 | 6. Transform — weekly acquisition topline, target-cohort capture (predicted + realized) | ✅ |
-| 7–8. Weekly & monthly PDF reports | ⬜ |
+| 7. Weekly PDF — operational report (Jinja + WeasyPrint, matplotlib charts) | ✅ |
+| 8. Monthly PDF — strategic deep-dive (cohort maturation, LTV:CAC, capture) | ✅ |
 | 9–10. Emit, delivery, pipeline wiring | ⬜ |
 | 11. Next.js dashboard | ⬜ |
 | 12. GitHub Actions automation | ⬜ |

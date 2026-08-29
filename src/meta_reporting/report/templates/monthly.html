@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% set report_kind = "Monthly deep-dive — strategic" %}
+
+{% block body %}
+<h2>Cohort maturation</h2>
+<div class="chart">
+    {{ ctx.charts.cohort_maturation | safe }}
+    <div class="caption">
+        CM-LTV per customer by acquisition month: realized to date (teal) vs projected to
+        12 months (amber, dashed). Young cohorts should project onto the same level as the
+        matured ones — that is the maturation model working.
+    </div>
+</div>
+
+<div class="chart">
+    {{ ctx.charts.maturation_curve | safe }}
+    <div class="caption">Pooled repeat-purchase curve — the shape used to project young cohorts.</div>
+</div>
+
+<h2>LTV:CAC by segment</h2>
+<div class="chart">
+    {{ ctx.charts.ltv_cac_by_strategy | safe }}
+    <div class="caption">Retargeting tops this on a very low CAC — read it alongside capture rate, below.</div>
+</div>
+
+<h3>By campaign</h3>
+{% set lc = ctx.tables[0] %}
+<table>
+    <thead><tr>{% for col in lc.columns %}<th>{{ col }}</th>{% endfor %}</tr></thead>
+    <tbody>
+    {% for row in lc.rows %}
+        <tr>{% for cell in row %}<td>{{ cell }}</td>{% endfor %}</tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<h2>Target-cohort capture</h2>
+<div class="chart">
+    {{ ctx.charts.capture_by_strategy | safe }}
+    <div class="caption">
+        Of the customers each strategy acquired, the share who became high-LTV. This is the
+        spine of the analysis: rank by capture <em>and</em> LTV:CAC, not day-1 ROAS.
+    </div>
+</div>
+
+{% set cap = ctx.tables[1] %}
+<table>
+    <thead><tr>{% for col in cap.columns %}<th>{{ col }}</th>{% endfor %}</tr></thead>
+    <tbody>
+    {% for row in cap.rows %}
+        <tr>{% for cell in row %}<td>{{ cell }}</td>{% endfor %}</tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+{% block appendix %}
+<h3>Methodology</h3>
+<p class="note">
+    <strong>CM-LTV</strong> is 12-month contribution-margin LTV: net revenue less per-SKU COGS,
+    a flat shipping cost and payment fees. <strong>Projection</strong>: a cohort observed to age
+    <em>t</em> with realized CM <em>c</em> is projected as <em>c × curve(12) / curve(t)</em>,
+    where the curve is the mean cumulative CM per customer by tenure, pooled across the whole
+    customer base. Cohorts already 12 months old are reported as realized.
+    <strong>Target cohort</strong>: ≥3 orders in the first 90 days, average order value ≥ $62,
+    and ≥1 premium-line purchase. <strong>CAC</strong> is cost per attributed new customer and
+    runs ~18% above true CAC due to untagged acquisitions.
+</p>
+{% endblock %}

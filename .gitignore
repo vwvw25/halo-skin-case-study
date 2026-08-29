@@ -23,6 +23,9 @@ out/
 npm-debug.log*
 yarn-error.log*
 
+# Generated reports (non-deterministic PDF timestamps); committed previews live in docs/
+reports/
+
 # OS / editor
 .DS_Store
 .idea/

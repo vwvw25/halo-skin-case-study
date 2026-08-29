@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% set report_kind = "Weekly performance — operational" %}
+
+{% block body %}
+<h2>Spend &amp; acquisition</h2>
+<div class="chart">
+    {{ ctx.charts.spend_cac_trend | safe }}
+    <div class="caption">Weekly spend (bars) against cost per acquired customer (line), last 13 weeks.</div>
+</div>
+
+<div class="chart">
+    {{ ctx.charts.funnel | safe }}
+    <div class="caption">This week's delivery funnel (log scale).</div>
+</div>
+
+{% for table in ctx.tables %}
+<h3>{{ table.title }}</h3>
+<table>
+    <thead><tr>{% for col in table.columns %}<th>{{ col }}</th>{% endfor %}</tr></thead>
+    <tbody>
+    {% for row in table.rows %}
+        <tr>{% for cell in row %}<td>{{ cell }}</td>{% endfor %}</tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endfor %}
+
+<h2>Early LTV signal</h2>
+<div class="chart">
+    {{ ctx.charts.predicted_capture | safe }}
+    <div class="caption">
+        Predicted share of each strategy's newest customers who will become high-LTV
+        (3+ orders in 90 days, AOV ≥ $62, ≥1 premium SKU). Leading indicator — realized rates
+        appear in the monthly report once cohorts mature.
+    </div>
+</div>
+{% endblock %}
+
+{% block appendix %}
+<p class="note">
+    CAC is cost per <em>attributed</em> new customer (Meta spend ÷ Shopify customers tagged to
+    the campaign); ~18% of acquisitions are untagged, so measured CAC runs slightly above true
+    CAC. The 30-day repeat rate is only shown for weeks old enough to have observed 30 days.
+</p>
+{% endblock %}
