@@ -101,11 +101,11 @@ Add constants to `src/meta_reporting/domain.py`:
 
 ```python
 LOYAL_CORE_NAME: Final = "Loyal Core"
-LOYAL_CORE_MIN_TENURE_MONTHS: Final = 14   # need this much observation to judge
+LOYAL_CORE_MIN_TENURE_MONTHS: Final = 14  # need this much observation to judge
 LOYAL_CORE_ACTIVE_WINDOW_DAYS: Final = 60  # ordered within the last N days = "still active"
 LOYAL_CORE_MIN_ORDERS: Final = 6
-LOYAL_CORE_MIN_SPAN_MONTHS: Final = 12     # first to last order
-LOYAL_CORE_MIN_ACTIVE_MONTHS: Final = 6    # of the last 12
+LOYAL_CORE_MIN_SPAN_MONTHS: Final = 12  # first to last order
+LOYAL_CORE_MIN_ACTIVE_MONTHS: Final = 6  # of the last 12
 LOYAL_CORE_CURVE_HORIZON_MONTHS: Final = 30
 ```
 
