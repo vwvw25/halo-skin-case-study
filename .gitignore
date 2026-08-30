@@ -34,3 +34,7 @@ data/snapshots/
 .idea/
 .vscode/
 *.swp
+
+# Local Claude context (personal, not committed)
+CLAUDE.md
+CLAUDE.local.md
