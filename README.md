@@ -45,6 +45,15 @@ uv run halo-report monthly --as-of 2026-06-30
 uv run halo-report monthly --deliver   # also send via DELIVER_CHANNEL
 ```
 
+### Dashboard
+
+`dashboard/` is a static Next.js app that reads `data/dashboard.json`. It deploys to Vercel
+(set the project's Root Directory to `dashboard`).
+
+```bash
+cd dashboard && npm install && npm run dev
+```
+
 ## Configuration
 
 Everything defaults to `mock`. Copy [`.env.example`](.env.example) to `.env` and set only what
@@ -72,9 +81,9 @@ you need:
 | 8. Monthly PDF — strategic deep-dive (cohort maturation, LTV:CAC, capture) | ✅ |
 | 9. `emit.py` (dashboard JSON) + `deliver.py` (Local / Drive / Email) | ✅ |
 | 10. `pipeline.py` — pull → transform → render → emit → deliver | ✅ |
-| 11. Next.js dashboard | ⬜ |
-| 12. GitHub Actions automation | ⬜ |
-| 13–14. Live API clients, README polish | ⬜ |
+| 11. Next.js dashboard (static export, Recharts, deploys to Vercel) | ✅ |
+| 12. GitHub Actions weekly/monthly cron workflows | ⬜ |
+| 13–14. Live API client polish, README previews | ⬜ |
 
 ## Development
 

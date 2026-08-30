@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Helvetica Neue", Arial, system-ui, sans-serif;
+}
+
+body {
+  background: theme("colors.canvas");
+  color: theme("colors.ink");
+}
+
+.recharts-cartesian-axis-tick text {
+  fill: theme("colors.muted");
+  font-size: 11px;
+}
+.recharts-text.recharts-label {
+  fill: theme("colors.muted");
+}
