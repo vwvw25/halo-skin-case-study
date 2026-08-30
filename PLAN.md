@@ -6,6 +6,10 @@
 Shopify data model; ships with mock data providers so it runs end-to-end with no credentials.
 Swapping in real tokens makes it live.
 
+**What comes after this:** a conversational analytics platform (natural-language chat, on-the-fly
+reports and visualisations) built on this project's transform layer. See
+[docs/next-project.md](docs/next-project.md).
+
 ---
 
 ## 1. The story

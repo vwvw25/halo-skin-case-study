@@ -96,6 +96,13 @@ uv run pytest
 101 tests run against deterministic mock fixtures — no live API calls. See
 [docs/testing.md](docs/testing.md) for what they cover and why.
 
+## Docs
+
+- [docs/data-sources.md](docs/data-sources.md) — the built-for-real-APIs / runs-on-mock-data seam
+- [docs/testing.md](docs/testing.md) — what the test suite covers and why
+- [docs/next-project.md](docs/next-project.md) — where this goes next: a conversational
+  analytics platform built on this transform layer
+
 ## License
 
 MIT
