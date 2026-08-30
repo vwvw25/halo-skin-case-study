@@ -84,6 +84,9 @@ uv run mypy
 uv run pytest
 ```
 
+101 tests run against deterministic mock fixtures — no live API calls. See
+[docs/testing.md](docs/testing.md) for what they cover and why.
+
 ## License
 
 MIT
