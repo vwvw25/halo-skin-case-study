@@ -15,10 +15,10 @@
   },
   "headline": {
     "blended_cac": 64.95,
-    "blended_cm_ltv_12": 146.98,
-    "blended_ltv_cac": 2.26,
+    "blended_cm_ltv_12": 197.25,
+    "blended_ltv_cac": 3.04,
     "customers_total": 20294,
-    "target_cohort_share": 0.2204
+    "target_cohort_share": 0.2235
   },
   "weekly_trend": [
     {
@@ -28,7 +28,7 @@
       "clicks": 337,
       "new_customers": 9,
       "cac": 26.72,
-      "first_order_cm": 61.23,
+      "first_order_cm": 66.93,
       "repeat_rate_30d": 0.2222
     },
     {
@@ -38,8 +38,8 @@
       "clicks": 7910,
       "new_customers": 173,
       "cac": 33.346,
-      "first_order_cm": 48.0857,
-      "repeat_rate_30d": 0.1676
+      "first_order_cm": 46.7443,
+      "repeat_rate_30d": 0.2023
     },
     {
       "week": "2025-06-09",
@@ -48,8 +48,8 @@
       "clicks": 16178,
       "new_customers": 350,
       "cac": 35.6285,
-      "first_order_cm": 48.276,
-      "repeat_rate_30d": 0.1657
+      "first_order_cm": 49.9247,
+      "repeat_rate_30d": 0.1743
     },
     {
       "week": "2025-06-16",
@@ -58,8 +58,8 @@
       "clicks": 17248,
       "new_customers": 365,
       "cac": 36.7907,
-      "first_order_cm": 52.1059,
-      "repeat_rate_30d": 0.1836
+      "first_order_cm": 53.6187,
+      "repeat_rate_30d": 0.1781
     },
     {
       "week": "2025-06-23",
@@ -68,8 +68,8 @@
       "clicks": 16139,
       "new_customers": 350,
       "cac": 38.3864,
-      "first_order_cm": 51.4441,
-      "repeat_rate_30d": 0.1657
+      "first_order_cm": 48.3736,
+      "repeat_rate_30d": 0.1629
     },
     {
       "week": "2025-06-30",
@@ -78,7 +78,7 @@
       "clicks": 15097,
       "new_customers": 329,
       "cac": 39.6345,
-      "first_order_cm": 55.7313,
+      "first_order_cm": 53.0684,
       "repeat_rate_30d": 0.2249
     },
     {
@@ -88,7 +88,7 @@
       "clicks": 14943,
       "new_customers": 313,
       "cac": 42.4557,
-      "first_order_cm": 53.385,
+      "first_order_cm": 52.3241,
       "repeat_rate_30d": 0.1789
     },
     {
@@ -98,8 +98,8 @@
       "clicks": 14377,
       "new_customers": 311,
       "cac": 42.417,
-      "first_order_cm": 52.747,
-      "repeat_rate_30d": 0.1511
+      "first_order_cm": 50.7407,
+      "repeat_rate_30d": 0.1801
     },
     {
       "week": "2025-07-21",
@@ -108,8 +108,8 @@
       "clicks": 14138,
       "new_customers": 305,
       "cac": 44.4821,
-      "first_order_cm": 52.6308,
-      "repeat_rate_30d": 0.2197
+      "first_order_cm": 50.6563,
+      "repeat_rate_30d": 0.1967
     },
     {
       "week": "2025-07-28",
@@ -118,7 +118,7 @@
       "clicks": 13675,
       "new_customers": 291,
       "cac": 46.8163,
-      "first_order_cm": 50.4897,
+      "first_order_cm": 47.8844,
       "repeat_rate_30d": 0.189
     },
     {
@@ -128,8 +128,8 @@
       "clicks": 13833,
       "new_customers": 307,
       "cac": 45.1423,
-      "first_order_cm": 50.9015,
-      "repeat_rate_30d": 0.2052
+      "first_order_cm": 50.5906,
+      "repeat_rate_30d": 0.1922
     },
     {
       "week": "2025-08-11",
@@ -138,8 +138,8 @@
       "clicks": 13480,
       "new_customers": 291,
       "cac": 47.6484,
-      "first_order_cm": 49.6043,
-      "repeat_rate_30d": 0.2062
+      "first_order_cm": 48.8721,
+      "repeat_rate_30d": 0.189
     },
     {
       "week": "2025-08-18",
@@ -148,8 +148,8 @@
       "clicks": 13503,
       "new_customers": 292,
       "cac": 49.5505,
-      "first_order_cm": 50.373,
-      "repeat_rate_30d": 0.2397
+      "first_order_cm": 54.7738,
+      "repeat_rate_30d": 0.2295
     },
     {
       "week": "2025-08-25",
@@ -158,7 +158,7 @@
       "clicks": 13464,
       "new_customers": 304,
       "cac": 48.6418,
-      "first_order_cm": 52.3156,
+      "first_order_cm": 51.2799,
       "repeat_rate_30d": 0.1974
     },
     {
@@ -168,8 +168,8 @@
       "clicks": 14271,
       "new_customers": 344,
       "cac": 45.7944,
-      "first_order_cm": 50.5131,
-      "repeat_rate_30d": 0.1919
+      "first_order_cm": 49.3119,
+      "repeat_rate_30d": 0.218
     },
     {
       "week": "2025-09-08",
@@ -178,8 +178,8 @@
       "clicks": 14245,
       "new_customers": 334,
       "cac": 48.1822,
-      "first_order_cm": 50.4514,
-      "repeat_rate_30d": 0.2036
+      "first_order_cm": 52.6904,
+      "repeat_rate_30d": 0.1916
     },
     {
       "week": "2025-09-15",
@@ -188,8 +188,8 @@
       "clicks": 13709,
       "new_customers": 337,
       "cac": 47.1841,
-      "first_order_cm": 50.8569,
-      "repeat_rate_30d": 0.184
+      "first_order_cm": 48.6246,
+      "repeat_rate_30d": 0.1899
     },
     {
       "week": "2025-09-22",
@@ -198,8 +198,8 @@
       "clicks": 13235,
       "new_customers": 315,
       "cac": 50.3557,
-      "first_order_cm": 50.805,
-      "repeat_rate_30d": 0.2254
+      "first_order_cm": 49.4764,
+      "repeat_rate_30d": 0.1937
     },
     {
       "week": "2025-09-29",
@@ -208,8 +208,8 @@
       "clicks": 13438,
       "new_customers": 326,
       "cac": 49.4844,
-      "first_order_cm": 54.9842,
-      "repeat_rate_30d": 0.227
+      "first_order_cm": 55.1966,
+      "repeat_rate_30d": 0.2301
     },
     {
       "week": "2025-10-06",
@@ -218,8 +218,8 @@
       "clicks": 13621,
       "new_customers": 345,
       "cac": 48.8223,
-      "first_order_cm": 54.4129,
-      "repeat_rate_30d": 0.1971
+      "first_order_cm": 55.4401,
+      "repeat_rate_30d": 0.2029
     },
     {
       "week": "2025-10-13",
@@ -228,8 +228,8 @@
       "clicks": 13650,
       "new_customers": 352,
       "cac": 48.526,
-      "first_order_cm": 52.3688,
-      "repeat_rate_30d": 0.2216
+      "first_order_cm": 52.3648,
+      "repeat_rate_30d": 0.1932
     },
     {
       "week": "2025-10-20",
@@ -238,8 +238,8 @@
       "clicks": 13573,
       "new_customers": 352,
       "cac": 48.8396,
-      "first_order_cm": 52.7742,
-      "repeat_rate_30d": 0.2216
+      "first_order_cm": 52.8398,
+      "repeat_rate_30d": 0.2045
     },
     {
       "week": "2025-10-27",
@@ -248,8 +248,8 @@
       "clicks": 13737,
       "new_customers": 364,
       "cac": 49.197,
-      "first_order_cm": 48.7965,
-      "repeat_rate_30d": 0.2033
+      "first_order_cm": 47.3354,
+      "repeat_rate_30d": 0.2005
     },
     {
       "week": "2025-11-03",
@@ -258,7 +258,7 @@
       "clicks": 15375,
       "new_customers": 438,
       "cac": 44.7369,
-      "first_order_cm": 50.934,
+      "first_order_cm": 51.8034,
       "repeat_rate_30d": 0.2237
     },
     {
@@ -268,8 +268,8 @@
       "clicks": 15598,
       "new_customers": 445,
       "cac": 46.084,
-      "first_order_cm": 53.3073,
-      "repeat_rate_30d": 0.2315
+      "first_order_cm": 52.0803,
+      "repeat_rate_30d": 0.2202
     },
     {
       "week": "2025-11-17",
@@ -278,8 +278,8 @@
       "clicks": 15689,
       "new_customers": 455,
       "cac": 45.8328,
-      "first_order_cm": 52.2969,
-      "repeat_rate_30d": 0.211
+      "first_order_cm": 54.0719,
+      "repeat_rate_30d": 0.2066
     },
     {
       "week": "2025-11-24",
@@ -288,8 +288,8 @@
       "clicks": 15775,
       "new_customers": 456,
       "cac": 46.667,
-      "first_order_cm": 51.0264,
-      "repeat_rate_30d": 0.1754
+      "first_order_cm": 49.6115,
+      "repeat_rate_30d": 0.1689
     },
     {
       "week": "2025-12-01",
@@ -298,8 +298,8 @@
       "clicks": 14737,
       "new_customers": 395,
       "cac": 50.2572,
-      "first_order_cm": 51.0409,
-      "repeat_rate_30d": 0.2228
+      "first_order_cm": 53.6683,
+      "repeat_rate_30d": 0.2278
     },
     {
       "week": "2025-12-08",
@@ -308,8 +308,8 @@
       "clicks": 14990,
       "new_customers": 415,
       "cac": 49.4578,
-      "first_order_cm": 52.1569,
-      "repeat_rate_30d": 0.2313
+      "first_order_cm": 51.5543,
+      "repeat_rate_30d": 0.2289
     },
     {
       "week": "2025-12-15",
@@ -318,8 +318,8 @@
       "clicks": 15055,
       "new_customers": 404,
       "cac": 52.001,
-      "first_order_cm": 53.5142,
-      "repeat_rate_30d": 0.2277
+      "first_order_cm": 50.4211,
+      "repeat_rate_30d": 0.2153
     },
     {
       "week": "2025-12-22",
@@ -328,8 +328,8 @@
       "clicks": 15112,
       "new_customers": 409,
       "cac": 50.4664,
-      "first_order_cm": 54.6157,
-      "repeat_rate_30d": 0.2714
+      "first_order_cm": 52.7428,
+      "repeat_rate_30d": 0.2543
     },
     {
       "week": "2025-12-29",
@@ -338,8 +338,8 @@
       "clicks": 12703,
       "new_customers": 309,
       "cac": 57.242,
-      "first_order_cm": 48.2621,
-      "repeat_rate_30d": 0.1748
+      "first_order_cm": 48.651,
+      "repeat_rate_30d": 0.1974
     },
     {
       "week": "2026-01-05",
@@ -348,8 +348,8 @@
       "clicks": 11560,
       "new_customers": 243,
       "cac": 66.3594,
-      "first_order_cm": 54.7477,
-      "repeat_rate_30d": 0.2099
+      "first_order_cm": 51.3685,
+      "repeat_rate_30d": 0.2181
     },
     {
       "week": "2026-01-12",
@@ -358,8 +358,8 @@
       "clicks": 12156,
       "new_customers": 249,
       "cac": 65.6848,
-      "first_order_cm": 49.3647,
-      "repeat_rate_30d": 0.1847
+      "first_order_cm": 50.8529,
+      "repeat_rate_30d": 0.1486
     },
     {
       "week": "2026-01-19",
@@ -368,8 +368,8 @@
       "clicks": 13076,
       "new_customers": 277,
       "cac": 60.8919,
-      "first_order_cm": 52.9305,
-      "repeat_rate_30d": 0.2058
+      "first_order_cm": 50.623,
+      "repeat_rate_30d": 0.1877
     },
     {
       "week": "2026-01-26",
@@ -378,8 +378,8 @@
       "clicks": 13070,
       "new_customers": 283,
       "cac": 60.2169,
-      "first_order_cm": 54.2199,
-      "repeat_rate_30d": 0.1979
+      "first_order_cm": 52.6919,
+      "repeat_rate_30d": 0.212
     },
     {
       "week": "2026-02-02",
@@ -388,8 +388,8 @@
       "clicks": 15158,
       "new_customers": 332,
       "cac": 56.618,
-      "first_order_cm": 54.4069,
-      "repeat_rate_30d": 0.238
+      "first_order_cm": 53.7501,
+      "repeat_rate_30d": 0.1988
     },
     {
       "week": "2026-02-09",
@@ -398,8 +398,8 @@
       "clicks": 14768,
       "new_customers": 333,
       "cac": 54.39,
-      "first_order_cm": 51.3617,
-      "repeat_rate_30d": 0.1922
+      "first_order_cm": 49.4756,
+      "repeat_rate_30d": 0.2072
     },
     {
       "week": "2026-02-16",
@@ -408,8 +408,8 @@
       "clicks": 14711,
       "new_customers": 338,
       "cac": 54.5146,
-      "first_order_cm": 51.501,
-      "repeat_rate_30d": 0.1953
+      "first_order_cm": 53.9787,
+      "repeat_rate_30d": 0.1805
     },
     {
       "week": "2026-02-23",
@@ -418,8 +418,8 @@
       "clicks": 14291,
       "new_customers": 329,
       "cac": 55.4016,
-      "first_order_cm": 48.9728,
-      "repeat_rate_30d": 0.2249
+      "first_order_cm": 50.1555,
+      "repeat_rate_30d": 0.234
     },
     {
       "week": "2026-03-02",
@@ -428,8 +428,8 @@
       "clicks": 16378,
       "new_customers": 374,
       "cac": 50.8797,
-      "first_order_cm": 49.9721,
-      "repeat_rate_30d": 0.1872
+      "first_order_cm": 47.9652,
+      "repeat_rate_30d": 0.2005
     },
     {
       "week": "2026-03-09",
@@ -438,8 +438,8 @@
       "clicks": 16427,
       "new_customers": 388,
       "cac": 50.6494,
-      "first_order_cm": 47.007,
-      "repeat_rate_30d": 0.1881
+      "first_order_cm": 50.6579,
+      "repeat_rate_30d": 0.183
     },
     {
       "week": "2026-03-16",
@@ -448,8 +448,8 @@
       "clicks": 15592,
       "new_customers": 370,
       "cac": 53.0223,
-      "first_order_cm": 52.7411,
-      "repeat_rate_30d": 0.2568
+      "first_order_cm": 53.8351,
+      "repeat_rate_30d": 0.2351
     },
     {
       "week": "2026-03-23",
@@ -458,8 +458,8 @@
       "clicks": 16195,
       "new_customers": 380,
       "cac": 52.7646,
-      "first_order_cm": 50.4486,
-      "repeat_rate_30d": 0.1711
+      "first_order_cm": 47.7282,
+      "repeat_rate_30d": 0.1868
     },
     {
       "week": "2026-03-30",
@@ -468,8 +468,8 @@
       "clicks": 15399,
       "new_customers": 371,
       "cac": 52.6768,
-      "first_order_cm": 48.1313,
-      "repeat_rate_30d": 0.1887
+      "first_order_cm": 49.2893,
+      "repeat_rate_30d": 0.1725
     },
     {
       "week": "2026-04-06",
@@ -478,8 +478,8 @@
       "clicks": 15328,
       "new_customers": 361,
       "cac": 56.0731,
-      "first_order_cm": 53.613,
-      "repeat_rate_30d": 0.205
+      "first_order_cm": 52.5618,
+      "repeat_rate_30d": 0.1967
     },
     {
       "week": "2026-04-13",
@@ -488,8 +488,8 @@
       "clicks": 15106,
       "new_customers": 354,
       "cac": 56.2328,
-      "first_order_cm": 52.9717,
-      "repeat_rate_30d": 0.2119
+      "first_order_cm": 52.5018,
+      "repeat_rate_30d": 0.1977
     },
     {
       "week": "2026-04-20",
@@ -498,8 +498,8 @@
       "clicks": 14496,
       "new_customers": 352,
       "cac": 55.7583,
-      "first_order_cm": 48.5346,
-      "repeat_rate_30d": 0.2301
+      "first_order_cm": 50.5412,
+      "repeat_rate_30d": 0.2216
     },
     {
       "week": "2026-04-27",
@@ -508,8 +508,8 @@
       "clicks": 14510,
       "new_customers": 345,
       "cac": 57.1172,
-      "first_order_cm": 49.5535,
-      "repeat_rate_30d": 0.1681
+      "first_order_cm": 50.555,
+      "repeat_rate_30d": 0.1797
     },
     {
       "week": "2026-05-04",
@@ -518,8 +518,8 @@
       "clicks": 13844,
       "new_customers": 322,
       "cac": 59.3665,
-      "first_order_cm": 49.8292,
-      "repeat_rate_30d": 0.2298
+      "first_order_cm": 51.6452,
+      "repeat_rate_30d": 0.2081
     },
     {
       "week": "2026-05-11",
@@ -528,8 +528,8 @@
       "clicks": 13738,
       "new_customers": 322,
       "cac": 60.217,
-      "first_order_cm": 52.6148,
-      "repeat_rate_30d": 0.2391
+      "first_order_cm": 53.6093,
+      "repeat_rate_30d": 0.236
     },
     {
       "week": "2026-05-18",
@@ -538,8 +538,8 @@
       "clicks": 13317,
       "new_customers": 309,
       "cac": 62.0529,
-      "first_order_cm": 50.8123,
-      "repeat_rate_30d": 0.2298
+      "first_order_cm": 49.8279,
+      "repeat_rate_30d": 0.2168
     },
     {
       "week": "2026-05-25",
@@ -548,8 +548,8 @@
       "clicks": 13574,
       "new_customers": 312,
       "cac": 62.0381,
-      "first_order_cm": 51.6251,
-      "repeat_rate_30d": 0.1891
+      "first_order_cm": 52.3696,
+      "repeat_rate_30d": 0.1827
     },
     {
       "week": "2026-06-01",
@@ -558,8 +558,8 @@
       "clicks": 13321,
       "new_customers": 309,
       "cac": 61.8408,
-      "first_order_cm": 48.6642,
-      "repeat_rate_30d": 0.1942
+      "first_order_cm": 50.8113,
+      "repeat_rate_30d": 0.233
     },
     {
       "week": "2026-06-08",
@@ -568,8 +568,8 @@
       "clicks": 13099,
       "new_customers": 296,
       "cac": 63.8615,
-      "first_order_cm": 50.666,
-      "repeat_rate_30d": 0.2399
+      "first_order_cm": 50.0658,
+      "repeat_rate_30d": 0.2331
     },
     {
       "week": "2026-06-15",
@@ -578,8 +578,8 @@
       "clicks": 13213,
       "new_customers": 301,
       "cac": 62.0582,
-      "first_order_cm": 52.1988,
-      "repeat_rate_30d": 0.2259
+      "first_order_cm": 46.8126,
+      "repeat_rate_30d": 0.2159
     },
     {
       "week": "2026-06-22",
@@ -588,8 +588,8 @@
       "clicks": 13188,
       "new_customers": 297,
       "cac": 62.9227,
-      "first_order_cm": 52.3398,
-      "repeat_rate_30d": 0.2323
+      "first_order_cm": 51.8629,
+      "repeat_rate_30d": 0.2256
     },
     {
       "week": "2026-06-29",
@@ -598,7 +598,7 @@
       "clicks": 13026,
       "new_customers": 293,
       "cac": 65.1942,
-      "first_order_cm": 49.1363,
+      "first_order_cm": 49.0718,
       "repeat_rate_30d": null
     },
     {
@@ -608,7 +608,7 @@
       "clicks": 12427,
       "new_customers": 282,
       "cac": 64.1579,
-      "first_order_cm": 51.3261,
+      "first_order_cm": 52.9834,
       "repeat_rate_30d": null
     },
     {
@@ -618,7 +618,7 @@
       "clicks": 12798,
       "new_customers": 279,
       "cac": 66.6129,
-      "first_order_cm": 54.1452,
+      "first_order_cm": 52.991,
       "repeat_rate_30d": null
     },
     {
@@ -628,7 +628,7 @@
       "clicks": 12824,
       "new_customers": 286,
       "cac": 64.2709,
-      "first_order_cm": 51.1669,
+      "first_order_cm": 51.8885,
       "repeat_rate_30d": null
     }
   ],
@@ -721,55 +721,55 @@
   "maturation_curve": [
     {
       "tenure_month": 0,
-      "cum_cm_per_customer": 55.56
+      "cum_cm_per_customer": 55.28
     },
     {
       "tenure_month": 1,
-      "cum_cm_per_customer": 76.93
+      "cum_cm_per_customer": 77.7
     },
     {
       "tenure_month": 2,
-      "cum_cm_per_customer": 91.87
+      "cum_cm_per_customer": 101.75
     },
     {
       "tenure_month": 3,
-      "cum_cm_per_customer": 103.6
+      "cum_cm_per_customer": 119.74
     },
     {
       "tenure_month": 4,
-      "cum_cm_per_customer": 115.18
+      "cum_cm_per_customer": 132.47
     },
     {
       "tenure_month": 5,
-      "cum_cm_per_customer": 123.91
+      "cum_cm_per_customer": 143.9
     },
     {
       "tenure_month": 6,
-      "cum_cm_per_customer": 131.19
+      "cum_cm_per_customer": 154.28
     },
     {
       "tenure_month": 7,
-      "cum_cm_per_customer": 137.07
+      "cum_cm_per_customer": 163.17
     },
     {
       "tenure_month": 8,
-      "cum_cm_per_customer": 141.19
+      "cum_cm_per_customer": 171.42
     },
     {
       "tenure_month": 9,
-      "cum_cm_per_customer": 144.07
+      "cum_cm_per_customer": 178.75
     },
     {
       "tenure_month": 10,
-      "cum_cm_per_customer": 145.52
+      "cum_cm_per_customer": 185.38
     },
     {
       "tenure_month": 11,
-      "cum_cm_per_customer": 146.45
+      "cum_cm_per_customer": 191.58
     },
     {
       "tenure_month": 12,
-      "cum_cm_per_customer": 146.89
+      "cum_cm_per_customer": 197.05
     }
   ],
   "cohort_ltv": [
@@ -777,112 +777,112 @@
       "acquisition_month": "2025-06-01",
       "cohort_size": 1305,
       "observed_age_months": 12,
-      "realized_cm_per_customer": 130.9677,
-      "projected_cm_per_customer": 130.9677,
+      "realized_cm_per_customer": 178.9989,
+      "projected_cm_per_customer": 178.9989,
       "maturity": "realized"
     },
     {
       "acquisition_month": "2025-07-01",
       "cohort_size": 1377,
       "observed_age_months": 12,
-      "realized_cm_per_customer": 146.9069,
-      "projected_cm_per_customer": 146.9069,
+      "realized_cm_per_customer": 197.3127,
+      "projected_cm_per_customer": 197.3127,
       "maturity": "realized"
     },
     {
       "acquisition_month": "2025-08-01",
       "cohort_size": 1308,
       "observed_age_months": 11,
-      "realized_cm_per_customer": 146.2084,
-      "projected_cm_per_customer": 146.6436,
+      "realized_cm_per_customer": 191.6926,
+      "projected_cm_per_customer": 197.1608,
       "maturity": "projected"
     },
     {
       "acquisition_month": "2025-09-01",
       "cohort_size": 1427,
       "observed_age_months": 10,
-      "realized_cm_per_customer": 145.3412,
-      "projected_cm_per_customer": 146.7113,
+      "realized_cm_per_customer": 182.7418,
+      "projected_cm_per_customer": 194.2395,
       "maturity": "projected"
     },
     {
       "acquisition_month": "2025-10-01",
       "cohort_size": 1536,
       "observed_age_months": 9,
-      "realized_cm_per_customer": 151.2214,
-      "projected_cm_per_customer": 154.1859,
+      "realized_cm_per_customer": 182.1104,
+      "projected_cm_per_customer": 200.7474,
       "maturity": "projected"
     },
     {
       "acquisition_month": "2025-11-01",
       "cohort_size": 1900,
       "observed_age_months": 8,
-      "realized_cm_per_customer": 141.45,
-      "projected_cm_per_customer": 147.1651,
+      "realized_cm_per_customer": 176.0913,
+      "projected_cm_per_customer": 202.4103,
       "maturity": "projected"
     },
     {
       "acquisition_month": "2025-12-01",
       "cohort_size": 1802,
       "observed_age_months": 7,
-      "realized_cm_per_customer": 144.9653,
-      "projected_cm_per_customer": 155.3523,
+      "realized_cm_per_customer": 171.7953,
+      "projected_cm_per_customer": 207.4663,
       "maturity": "projected"
     },
     {
       "acquisition_month": "2026-01-01",
       "cohort_size": 1142,
       "observed_age_months": 6,
-      "realized_cm_per_customer": 129.4781,
-      "projected_cm_per_customer": 144.972,
+      "realized_cm_per_customer": 156.8111,
+      "projected_cm_per_customer": 200.2776,
       "maturity": "projected"
     },
     {
       "acquisition_month": "2026-02-01",
       "cohort_size": 1331,
       "observed_age_months": 5,
-      "realized_cm_per_customer": 126.0273,
-      "projected_cm_per_customer": 149.3983,
+      "realized_cm_per_customer": 147.6136,
+      "projected_cm_per_customer": 202.1362,
       "maturity": "projected"
     },
     {
       "acquisition_month": "2026-03-01",
       "cohort_size": 1659,
       "observed_age_months": 4,
-      "realized_cm_per_customer": 112.909,
-      "projected_cm_per_customer": 143.9993,
+      "realized_cm_per_customer": 124.8244,
+      "projected_cm_per_customer": 185.6673,
       "maturity": "projected"
     },
     {
       "acquisition_month": "2026-04-01",
       "cohort_size": 1544,
       "observed_age_months": 3,
-      "realized_cm_per_customer": 99.9073,
-      "projected_cm_per_customer": 141.6606,
+      "realized_cm_per_customer": 119.6166,
+      "projected_cm_per_customer": 196.841,
       "maturity": "projected"
     },
     {
       "acquisition_month": "2026-05-01",
       "cohort_size": 1398,
       "observed_age_months": 2,
-      "realized_cm_per_customer": 93.1434,
-      "projected_cm_per_customer": 148.9281,
+      "realized_cm_per_customer": 103.4923,
+      "projected_cm_per_customer": 200.4154,
       "maturity": "projected"
     },
     {
       "acquisition_month": "2026-06-01",
       "cohort_size": 1297,
       "observed_age_months": 1,
-      "realized_cm_per_customer": 78.4255,
-      "projected_cm_per_customer": 149.7396,
+      "realized_cm_per_customer": 76.8644,
+      "projected_cm_per_customer": 194.9279,
       "maturity": "projected"
     },
     {
       "acquisition_month": "2026-07-01",
       "cohort_size": 1268,
       "observed_age_months": 0,
-      "realized_cm_per_customer": 55.9337,
-      "projected_cm_per_customer": 147.8881,
+      "realized_cm_per_customer": 56.0004,
+      "projected_cm_per_customer": 199.6212,
       "maturity": "projected"
     }
   ],
@@ -891,8 +891,8 @@
       "name": "Retargeting \u2014 14d ATC/VC",
       "customers": 2416.0,
       "cac": 23.5535,
-      "cm_ltv_12": 125.7994,
-      "ltv_cac": 5.341,
+      "cm_ltv_12": 167.2554,
+      "ltv_cac": 7.1011,
       "payback_months": 0.0,
       "realized_share": 0.1429
     },
@@ -900,8 +900,8 @@
       "name": "LAL 1% \u2014 Regimen Builders",
       "customers": 1291.0,
       "cac": 41.1488,
-      "cm_ltv_12": 217.0931,
-      "ltv_cac": 5.2758,
+      "cm_ltv_12": 289.8905,
+      "ltv_cac": 7.0449,
       "payback_months": 0.0,
       "realized_share": 0.0
     },
@@ -909,8 +909,8 @@
       "name": "LAL 1% \u2014 Purchasers",
       "customers": 3857.0,
       "cac": 41.9734,
-      "cm_ltv_12": 173.272,
-      "ltv_cac": 4.1281,
+      "cm_ltv_12": 236.2311,
+      "ltv_cac": 5.6281,
       "payback_months": 0.0,
       "realized_share": 0.1429
     },
@@ -918,8 +918,8 @@
       "name": "Retargeting \u2014 180d All Visitors",
       "customers": 1107.0,
       "cac": 33.214,
-      "cm_ltv_12": 124.7308,
-      "ltv_cac": 3.7554,
+      "cm_ltv_12": 160.5458,
+      "ltv_cac": 4.8337,
       "payback_months": 0.0,
       "realized_share": 0.1429
     },
@@ -927,8 +927,8 @@
       "name": "LAL 3% \u2014 Purchasers",
       "customers": 1235.0,
       "cac": 48.628,
-      "cm_ltv_12": 148.778,
-      "ltv_cac": 3.0595,
+      "cm_ltv_12": 206.1958,
+      "ltv_cac": 4.2403,
       "payback_months": 0.0,
       "realized_share": 0.1429
     },
@@ -936,8 +936,8 @@
       "name": "Prospecting \u2014 Interests (Skincare Stack)",
       "customers": 2232.0,
       "cac": 55.0082,
-      "cm_ltv_12": 137.2853,
-      "ltv_cac": 2.4957,
+      "cm_ltv_12": 184.8031,
+      "ltv_cac": 3.3596,
       "payback_months": 1.0,
       "realized_share": 0.1429
     },
@@ -945,8 +945,8 @@
       "name": "Creative Testing \u2014 TOF",
       "customers": 616.0,
       "cac": 52.8232,
-      "cm_ltv_12": 129.1831,
-      "ltv_cac": 2.4456,
+      "cm_ltv_12": 171.7626,
+      "ltv_cac": 3.2516,
       "payback_months": 1.0,
       "realized_share": 0.1429
     },
@@ -954,8 +954,8 @@
       "name": "Advantage+ Shopping",
       "customers": 4930.0,
       "cac": 65.5725,
-      "cm_ltv_12": 147.6951,
-      "ltv_cac": 2.2524,
+      "cm_ltv_12": 197.7744,
+      "ltv_cac": 3.0161,
       "payback_months": 1.0,
       "realized_share": 0.1429
     },
@@ -963,8 +963,8 @@
       "name": "Prospecting \u2014 Broad",
       "customers": 2583.0,
       "cac": 66.497,
-      "cm_ltv_12": 112.5339,
-      "ltv_cac": 1.6923,
+      "cm_ltv_12": 148.4288,
+      "ltv_cac": 2.2321,
       "payback_months": 2.0,
       "realized_share": 0.1429
     },
@@ -972,8 +972,8 @@
       "name": "Brand \u2014 Video Views",
       "customers": 27.0,
       "cac": 1430.2052,
-      "cm_ltv_12": 132.764,
-      "ltv_cac": 0.0928,
+      "cm_ltv_12": 163.1628,
+      "ltv_cac": 0.1141,
       "payback_months": null,
       "realized_share": 0.2857
     }
@@ -983,48 +983,48 @@
       "strategy": "retargeting",
       "customers": 3523.0,
       "cac": 26.589,
-      "cm_ltv_12": 125.4636,
-      "ltv_cac": 4.7186,
+      "cm_ltv_12": 165.1471,
+      "ltv_cac": 6.2111,
       "payback_months": 0.0
     },
     {
       "strategy": "lookalike",
       "customers": 6383.0,
       "cac": 43.0942,
-      "cm_ltv_12": 177.3959,
-      "ltv_cac": 4.1165,
+      "cm_ltv_12": 241.2727,
+      "ltv_cac": 5.5987,
       "payback_months": 0.0
     },
     {
       "strategy": "prospecting_interest",
       "customers": 2232.0,
       "cac": 55.0082,
-      "cm_ltv_12": 137.2853,
-      "ltv_cac": 2.4957,
+      "cm_ltv_12": 184.8031,
+      "ltv_cac": 3.3596,
       "payback_months": 1.0
     },
     {
       "strategy": "advantage_plus",
       "customers": 4930.0,
       "cac": 65.5725,
-      "cm_ltv_12": 147.6951,
-      "ltv_cac": 2.2524,
+      "cm_ltv_12": 197.7744,
+      "ltv_cac": 3.0161,
       "payback_months": 1.0
     },
     {
       "strategy": "prospecting_broad",
       "customers": 3199.0,
       "cac": 63.864,
-      "cm_ltv_12": 115.7399,
-      "ltv_cac": 1.8123,
+      "cm_ltv_12": 152.9219,
+      "ltv_cac": 2.3945,
       "payback_months": 2.0
     },
     {
       "strategy": "awareness",
       "customers": 27.0,
       "cac": 1430.2052,
-      "cm_ltv_12": 132.764,
-      "ltv_cac": 0.0928,
+      "cm_ltv_12": 163.1628,
+      "ltv_cac": 0.1141,
       "payback_months": null
     }
   ],
@@ -1033,49 +1033,49 @@
       "acquisition_strategy": "advantage_plus",
       "customers": 4930.0,
       "matured": 3848.0,
-      "realized_capture_rate": 0.2175,
-      "predicted_capture_rate": 0.2026,
-      "blended_capture_rate": 0.2142
+      "realized_capture_rate": 0.2212,
+      "predicted_capture_rate": 0.2186,
+      "blended_capture_rate": 0.2206
     },
     {
       "acquisition_strategy": "awareness",
       "customers": 27.0,
       "matured": 27.0,
-      "realized_capture_rate": 0.1481,
+      "realized_capture_rate": 0.0741,
       "predicted_capture_rate": null,
-      "blended_capture_rate": 0.1481
+      "blended_capture_rate": 0.0741
     },
     {
       "acquisition_strategy": "lookalike",
       "customers": 6383.0,
       "matured": 5107.0,
-      "realized_capture_rate": 0.3174,
-      "predicted_capture_rate": 0.2526,
-      "blended_capture_rate": 0.3044
+      "realized_capture_rate": 0.3182,
+      "predicted_capture_rate": 0.2549,
+      "blended_capture_rate": 0.3055
     },
     {
       "acquisition_strategy": "prospecting_broad",
       "customers": 3199.0,
       "matured": 2641.0,
-      "realized_capture_rate": 0.1234,
-      "predicted_capture_rate": 0.1165,
-      "blended_capture_rate": 0.1222
+      "realized_capture_rate": 0.1306,
+      "predicted_capture_rate": 0.1358,
+      "blended_capture_rate": 0.1315
     },
     {
       "acquisition_strategy": "prospecting_interest",
       "customers": 2232.0,
       "matured": 1872.0,
-      "realized_capture_rate": 0.1993,
-      "predicted_capture_rate": 0.1645,
-      "blended_capture_rate": 0.1936
+      "realized_capture_rate": 0.203,
+      "predicted_capture_rate": 0.1719,
+      "blended_capture_rate": 0.198
     },
     {
       "acquisition_strategy": "retargeting",
       "customers": 3523.0,
       "matured": 2928.0,
-      "realized_capture_rate": 0.1568,
-      "predicted_capture_rate": 0.1405,
-      "blended_capture_rate": 0.154
+      "realized_capture_rate": 0.1595,
+      "predicted_capture_rate": 0.1572,
+      "blended_capture_rate": 0.1591
     }
   ],
   "cohort_triangle": {
@@ -1098,151 +1098,151 @@
       {
         "acquired": "2025-06-01",
         "cohort_size": 1305,
-        "repeat_rate": 0.4268,
+        "repeat_rate": 0.5985,
         "cac": 36.3124,
-        "first_order_revenue": 73.8711,
-        "first_order_cm": 50.2007,
+        "first_order_revenue": 73.7302,
+        "first_order_cm": 50.073,
         "revenue": [
-          77.51,
-          103.51,
-          123.51,
-          138.2,
-          153.23,
-          163.8,
-          172.6,
-          178.65,
-          182.68,
-          185.75,
-          187.42,
-          188.75,
-          189.05
+          77.72,
+          104.73,
+          138.79,
+          162.65,
+          179.19,
+          193.92,
+          207.08,
+          217.46,
+          226.71,
+          235.28,
+          242.5,
+          250.67,
+          257.43
         ],
         "cm": [
-          52.75,
-          71.16,
-          85.15,
-          95.32,
-          105.98,
-          113.41,
-          119.42,
-          123.63,
-          126.46,
-          128.61,
-          129.8,
-          130.75,
-          130.97
+          52.87,
+          71.88,
+          95.65,
+          112.28,
+          123.94,
+          134.26,
+          143.52,
+          150.81,
+          157.28,
+          163.32,
+          168.41,
+          174.23,
+          179.0
         ]
       },
       {
         "acquired": "2025-07-01",
         "cohort_size": 1377,
-        "repeat_rate": 0.4662,
+        "repeat_rate": 0.6042,
         "cac": 42.9648,
-        "first_order_revenue": 78.1125,
-        "first_order_cm": 53.6035,
+        "first_order_revenue": 75.704,
+        "first_order_cm": 51.5799,
         "revenue": [
-          85.55,
-          114.03,
-          133.04,
-          152.44,
-          167.46,
-          179.36,
-          190.22,
-          196.76,
-          202.39,
-          206.73,
-          208.62,
-          209.88,
-          210.78
+          82.89,
+          115.12,
+          149.12,
+          174.36,
+          191.07,
+          206.94,
+          220.83,
+          231.54,
+          244.05,
+          255.13,
+          265.36,
+          274.36,
+          282.97
         ],
         "cm": [
-          58.92,
-          79.08,
-          92.41,
-          106.01,
-          116.52,
-          124.83,
+          56.64,
+          79.44,
+          103.07,
+          120.68,
           132.39,
-          136.98,
-          140.97,
-          144.04,
-          145.35,
-          146.26,
-          146.91
+          143.47,
+          153.27,
+          160.79,
+          169.65,
+          177.57,
+          184.78,
+          191.19,
+          197.31
         ]
       },
       {
         "acquired": "2025-08-01",
         "cohort_size": 1308,
-        "repeat_rate": 0.487,
+        "repeat_rate": 0.6246,
         "cac": 47.7705,
-        "first_order_revenue": 74.2014,
-        "first_order_cm": 50.7152,
+        "first_order_revenue": 74.597,
+        "first_order_cm": 50.9415,
         "revenue": [
-          79.27,
-          109.31,
-          131.31,
-          149.18,
-          166.35,
-          177.88,
-          187.97,
-          197.26,
-          202.4,
-          206.86,
-          208.61,
-          209.96,
+          79.47,
+          111.54,
+          145.87,
+          171.64,
+          190.05,
+          206.48,
+          221.09,
+          233.7,
+          245.49,
+          255.87,
+          265.89,
+          274.84,
           null
         ],
         "cm": [
-          54.27,
-          75.51,
-          91.03,
-          103.48,
-          115.5,
-          123.56,
-          130.62,
-          137.22,
-          140.85,
-          144.04,
-          145.26,
-          146.21,
+          54.35,
+          77.01,
+          100.84,
+          118.79,
+          131.72,
+          143.26,
+          153.64,
+          162.58,
+          170.93,
+          178.28,
+          185.34,
+          191.69,
           null
         ]
       },
       {
         "acquired": "2025-09-01",
         "cohort_size": 1427,
-        "repeat_rate": 0.4632,
+        "repeat_rate": 0.6034,
         "cac": 47.9034,
-        "first_order_revenue": 74.8552,
-        "first_order_cm": 51.0551,
+        "first_order_revenue": 74.4255,
+        "first_order_cm": 50.6954,
         "revenue": [
-          80.25,
-          109.3,
-          131.1,
-          148.11,
-          165.26,
-          176.47,
-          187.62,
-          194.73,
-          201.49,
-          205.62,
-          208.49,
+          80.28,
+          112.15,
+          147.08,
+          172.1,
+          190.21,
+          204.26,
+          218.46,
+          230.67,
+          242.33,
+          252.37,
+          262.4,
           null,
           null
         ],
         "cm": [
-          54.83,
-          75.42,
-          90.89,
-          102.78,
-          114.82,
-          122.72,
-          130.62,
-          135.56,
-          140.39,
-          143.3,
-          145.34,
+          54.72,
+          77.13,
+          101.74,
+          119.15,
+          131.79,
+          141.63,
+          151.66,
+          160.31,
+          168.51,
+          175.66,
+          182.74,
           null,
           null
         ]
@@ -1250,36 +1250,36 @@
       {
         "acquired": "2025-10-01",
         "cohort_size": 1536,
-        "repeat_rate": 0.4876,
+        "repeat_rate": 0.599,
         "cac": 49.2724,
-        "first_order_revenue": 77.0481,
-        "first_order_cm": 52.6834,
+        "first_order_revenue": 77.2347,
+        "first_order_cm": 52.8181,
         "revenue": [
-          82.92,
-          112.76,
-          134.59,
-          153.37,
-          170.09,
-          184.49,
-          194.53,
-          205.26,
-          212.5,
-          216.83,
+          83.75,
+          115.83,
+          151.99,
+          178.65,
+          194.85,
+          211.5,
+          225.51,
+          238.37,
+          249.91,
+          261.28,
           null,
           null,
           null
         ],
         "cm": [
-          56.86,
-          78.16,
-          93.38,
-          106.56,
-          118.32,
-          128.44,
-          135.47,
-          143.05,
-          148.19,
-          151.22,
+          57.45,
+          80.12,
+          105.35,
+          123.96,
+          135.22,
+          146.96,
+          156.79,
+          165.88,
+          174.07,
+          182.11,
           null,
           null,
           null
@@ -1288,35 +1288,35 @@
       {
         "acquired": "2025-11-01",
         "cohort_size": 1900,
-        "repeat_rate": 0.4737,
+        "repeat_rate": 0.6153,
         "cac": 45.769,
-        "first_order_revenue": 75.6315,
-        "first_order_cm": 51.6609,
+        "first_order_revenue": 75.2338,
+        "first_order_cm": 51.335,
         "revenue": [
-          80.74,
-          112.06,
-          134.25,
-          149.7,
-          166.76,
-          179.35,
-          189.39,
-          197.93,
-          203.68,
+          81.14,
+          113.37,
+          148.17,
+          174.21,
+          194.74,
+          210.78,
+          226.32,
+          239.74,
+          252.51,
           null,
           null,
           null,
           null
         ],
         "cm": [
-          55.2,
-          77.41,
-          92.98,
-          103.72,
-          115.62,
-          124.4,
-          131.38,
-          137.38,
-          141.45,
+          55.52,
+          78.22,
+          102.48,
+          120.68,
+          135.17,
+          146.49,
+          157.49,
+          167.0,
+          176.09,
           null,
           null,
           null,
@@ -1326,19 +1326,19 @@
       {
         "acquired": "2025-12-01",
         "cohort_size": 1802,
-        "repeat_rate": 0.4872,
+        "repeat_rate": 0.6276,
         "cac": 50.6279,
-        "first_order_revenue": 76.2093,
-        "first_order_cm": 52.0756,
+        "first_order_revenue": 75.3145,
+        "first_order_cm": 51.3518,
         "revenue": [
-          83.42,
-          117.99,
-          138.66,
-          156.55,
-          173.36,
-          187.4,
-          198.41,
-          207.89,
+          81.83,
+          116.72,
+          149.87,
+          178.26,
+          197.5,
+          215.67,
+          232.32,
+          246.99,
           null,
           null,
           null,
@@ -1346,14 +1346,14 @@
           null
         ],
         "cm": [
-          57.22,
-          81.84,
-          96.37,
-          108.84,
-          120.63,
-          130.53,
-          138.26,
-          144.97,
+          55.96,
+          80.4,
+          103.5,
+          123.33,
+          136.75,
+          149.6,
+          161.41,
+          171.8,
           null,
           null,
           null,
@@ -1364,18 +1364,18 @@
       {
         "acquired": "2026-01-01",
         "cohort_size": 1142,
-        "repeat_rate": 0.4641,
+        "repeat_rate": 0.6016,
         "cac": 63.7229,
-        "first_order_revenue": 77.1823,
-        "first_order_cm": 52.8318,
+        "first_order_revenue": 75.886,
+        "first_order_cm": 51.7281,
         "revenue": [
-          82.36,
-          108.09,
-          131.08,
-          146.09,
-          163.33,
-          175.21,
-          186.51,
+          81.02,
+          111.06,
+          147.53,
+          174.75,
+          194.48,
+          210.6,
+          225.21,
           null,
           null,
           null,
@@ -1384,13 +1384,13 @@
           null
         ],
         "cm": [
-          56.47,
-          74.68,
-          90.64,
-          101.07,
-          113.18,
-          121.5,
-          129.48,
+          55.32,
+          76.57,
+          102.15,
+          121.16,
+          135.04,
+          146.5,
+          156.81,
           null,
           null,
           null,
@@ -1402,17 +1402,17 @@
       {
         "acquired": "2026-02-01",
         "cohort_size": 1331,
-        "repeat_rate": 0.4816,
+        "repeat_rate": 0.6056,
         "cac": 55.0967,
-        "first_order_revenue": 75.9245,
-        "first_order_cm": 51.6739,
+        "first_order_revenue": 76.5747,
+        "first_order_cm": 52.1819,
         "revenue": [
-          80.58,
-          114.05,
-          135.57,
-          152.58,
-          168.6,
-          181.62,
+          81.03,
+          115.71,
+          151.09,
+          176.83,
+          195.58,
+          213.05,
           null,
           null,
           null,
@@ -1422,12 +1422,12 @@
           null
         ],
         "cm": [
-          55.03,
-          78.74,
-          93.83,
-          105.61,
-          116.88,
-          126.03,
+          55.34,
+          79.87,
+          104.53,
+          122.28,
+          135.39,
+          147.61,
           null,
           null,
           null,
@@ -1440,16 +1440,16 @@
       {
         "acquired": "2026-03-01",
         "cohort_size": 1659,
-        "repeat_rate": 0.4629,
+        "repeat_rate": 0.5986,
         "cac": 52.1876,
-        "first_order_revenue": 73.6689,
-        "first_order_cm": 49.9699,
+        "first_order_revenue": 73.0929,
+        "first_order_cm": 49.6747,
         "revenue": [
-          79.7,
-          108.37,
-          129.65,
-          146.4,
-          163.01,
+          78.27,
+          107.04,
+          140.71,
+          163.85,
+          180.81,
           null,
           null,
           null,
@@ -1460,11 +1460,11 @@
           null
         ],
         "cm": [
-          54.28,
-          74.67,
-          89.66,
-          101.33,
-          112.91,
+          53.27,
+          73.43,
+          96.79,
+          112.95,
+          124.82,
           null,
           null,
           null,
@@ -1478,15 +1478,15 @@
       {
         "acquired": "2026-04-01",
         "cohort_size": 1544,
-        "repeat_rate": 0.4054,
+        "repeat_rate": 0.5868,
         "cac": 55.3611,
-        "first_order_revenue": 74.5223,
-        "first_order_cm": 50.7976,
+        "first_order_revenue": 75.5326,
+        "first_order_cm": 51.5611,
         "revenue": [
-          80.18,
-          109.62,
-          129.37,
-          144.45,
+          80.77,
+          112.45,
+          146.18,
+          172.79,
           null,
           null,
           null,
@@ -1498,10 +1498,10 @@
           null
         ],
         "cm": [
-          54.84,
-          75.63,
-          89.44,
-          99.91,
+          55.21,
+          77.59,
+          101.17,
+          119.62,
           null,
           null,
           null,
@@ -1516,14 +1516,14 @@
       {
         "acquired": "2026-05-01",
         "cohort_size": 1398,
-        "repeat_rate": 0.3383,
+        "repeat_rate": 0.4857,
         "cac": 60.5732,
-        "first_order_revenue": 74.7523,
-        "first_order_cm": 50.9526,
+        "first_order_revenue": 75.4393,
+        "first_order_cm": 51.4932,
         "revenue": [
-          81.38,
-          111.68,
-          134.34,
+          82.71,
+          115.65,
+          149.25,
           null,
           null,
           null,
@@ -1536,9 +1536,9 @@
           null
         ],
         "cm": [
-          55.7,
-          77.27,
-          93.14,
+          56.7,
+          79.94,
+          103.49,
           null,
           null,
           null,
@@ -1554,13 +1554,13 @@
       {
         "acquired": "2026-06-01",
         "cohort_size": 1297,
-        "repeat_rate": 0.276,
+        "repeat_rate": 0.34,
         "cac": 62.6437,
-        "first_order_revenue": 74.6836,
-        "first_order_cm": 50.8658,
+        "first_order_revenue": 73.394,
+        "first_order_cm": 49.8417,
         "revenue": [
-          80.89,
-          113.45,
+          79.65,
+          111.85,
           null,
           null,
           null,
@@ -1574,8 +1574,8 @@
           null
         ],
         "cm": [
-          55.25,
-          78.43,
+          54.25,
+          76.86,
           null,
           null,
           null,
@@ -1592,12 +1592,12 @@
       {
         "acquired": "2026-07-01",
         "cohort_size": 1268,
-        "repeat_rate": 0.0599,
+        "repeat_rate": 0.0591,
         "cac": 64.9458,
-        "first_order_revenue": 75.6643,
-        "first_order_cm": 51.5996,
+        "first_order_revenue": 76.4,
+        "first_order_cm": 52.3494,
         "revenue": [
-          81.73,
+          81.58,
           null,
           null,
           null,
@@ -1612,7 +1612,7 @@
           null
         ],
         "cm": [
-          55.93,
+          56.0,
           null,
           null,
           null,
@@ -1633,275 +1633,275 @@
     {
       "month_index": 0,
       "segment": "target",
-      "n": 3620,
-      "cum_revenue": 128.3213,
-      "cum_cm": 91.9805
+      "n": 3670,
+      "cum_revenue": 123.3965,
+      "cum_cm": 88.1393
     },
     {
       "month_index": 0,
       "segment": "other",
-      "n": 12803,
-      "cum_revenue": 67.9197,
-      "cum_cm": 45.2946
+      "n": 12753,
+      "cum_revenue": 68.6368,
+      "cum_cm": 45.7813
     },
     {
       "month_index": 0,
       "segment": "blended",
       "n": 16423,
-      "cum_revenue": 81.2336,
-      "cum_cm": 55.5852
+      "cum_revenue": 80.8738,
+      "cum_cm": 55.2469
     },
     {
       "month_index": 1,
       "segment": "target",
-      "n": 3620,
-      "cum_revenue": 251.3718,
-      "cum_cm": 180.0779
+      "n": 3670,
+      "cum_revenue": 235.1563,
+      "cum_cm": 168.0088
     },
     {
       "month_index": 1,
       "segment": "other",
-      "n": 12803,
-      "cum_revenue": 71.4322,
-      "cum_cm": 47.5554
+      "n": 12753,
+      "cum_revenue": 77.3153,
+      "cum_cm": 51.5843
     },
     {
       "month_index": 1,
       "segment": "blended",
       "n": 16423,
-      "cum_revenue": 111.095,
-      "cum_cm": 76.7664
+      "cum_revenue": 112.5875,
+      "cum_cm": 77.6014
     },
     {
       "month_index": 2,
       "segment": "target",
-      "n": 3620,
-      "cum_revenue": 322.434,
-      "cum_cm": 230.9289
+      "n": 3670,
+      "cum_revenue": 337.1046,
+      "cum_cm": 240.8445
     },
     {
       "month_index": 2,
       "segment": "other",
-      "n": 12803,
-      "cum_revenue": 78.443,
-      "cum_cm": 52.193
+      "n": 12753,
+      "cum_revenue": 92.4178,
+      "cum_cm": 61.6256
     },
     {
       "month_index": 2,
       "segment": "blended",
       "n": 16423,
-      "cum_revenue": 132.2242,
-      "cum_cm": 91.5904
+      "cum_revenue": 147.0972,
+      "cum_cm": 101.6752
     },
     {
       "month_index": 3,
       "segment": "target",
-      "n": 3603,
-      "cum_revenue": 366.8286,
-      "cum_cm": 262.5732
+      "n": 3650,
+      "cum_revenue": 410.5761,
+      "cum_cm": 293.052
     },
     {
       "month_index": 3,
       "segment": "other",
-      "n": 12728,
-      "cum_revenue": 87.444,
-      "cum_cm": 58.2626
+      "n": 12681,
+      "cum_revenue": 104.4082,
+      "cum_cm": 69.6773
     },
     {
       "month_index": 3,
       "segment": "blended",
       "n": 16331,
-      "cum_revenue": 149.0827,
-      "cum_cm": 103.3383
+      "cum_revenue": 172.8371,
+      "cum_cm": 119.6019
     },
     {
       "month_index": 4,
       "segment": "target",
-      "n": 3270,
-      "cum_revenue": 418.3799,
-      "cum_cm": 299.3173
+      "n": 3300,
+      "cum_revenue": 466.6397,
+      "cum_cm": 332.8075
     },
     {
       "month_index": 4,
       "segment": "other",
-      "n": 11517,
-      "cum_revenue": 94.4442,
-      "cum_cm": 63.0223
+      "n": 11487,
+      "cum_revenue": 111.8324,
+      "cum_cm": 74.7409
     },
     {
       "month_index": 4,
       "segment": "blended",
       "n": 14787,
-      "cum_revenue": 166.0794,
-      "cum_cm": 115.2766
+      "cum_revenue": 191.0143,
+      "cum_cm": 132.3333
     },
     {
       "month_index": 5,
       "segment": "target",
-      "n": 2922,
-      "cum_revenue": 456.9619,
-      "cum_cm": 326.6889
+      "n": 2955,
+      "cum_revenue": 522.6857,
+      "cum_cm": 372.712
     },
     {
       "month_index": 5,
       "segment": "other",
-      "n": 10206,
-      "cum_revenue": 99.3189,
-      "cum_cm": 66.3706
+      "n": 10173,
+      "cum_revenue": 117.2824,
+      "cum_cm": 78.4738
     },
     {
       "month_index": 5,
       "segment": "blended",
       "n": 13128,
-      "cum_revenue": 178.9223,
-      "cum_cm": 124.3116
+      "cum_revenue": 208.5352,
+      "cum_cm": 144.7043
     },
     {
       "month_index": 6,
       "segment": "target",
-      "n": 2603,
-      "cum_revenue": 490.5766,
-      "cum_cm": 350.4908
+      "n": 2644,
+      "cum_revenue": 573.7739,
+      "cum_cm": 409.0636
     },
     {
       "month_index": 6,
       "segment": "other",
-      "n": 9194,
-      "cum_revenue": 103.6517,
-      "cum_cm": 69.3682
+      "n": 9153,
+      "cum_revenue": 121.3174,
+      "cum_cm": 81.3006
     },
     {
       "month_index": 6,
       "segment": "blended",
       "n": 11797,
-      "cum_revenue": 189.0264,
-      "cum_cm": 131.3977
+      "cum_revenue": 222.7241,
+      "cum_cm": 154.7604
     },
     {
       "month_index": 7,
       "segment": "target",
-      "n": 2359,
-      "cum_revenue": 518.3182,
-      "cum_cm": 370.3344
+      "n": 2392,
+      "cum_revenue": 618.9926,
+      "cum_cm": 441.1965
     },
     {
       "month_index": 7,
       "segment": "other",
-      "n": 8296,
-      "cum_revenue": 106.4622,
-      "cum_cm": 71.2685
+      "n": 8263,
+      "cum_revenue": 123.8704,
+      "cum_cm": 83.0166
     },
     {
       "month_index": 7,
       "segment": "blended",
       "n": 10655,
-      "cum_revenue": 197.6464,
-      "cum_cm": 137.4812
+      "cum_revenue": 235.0231,
+      "cum_cm": 163.4264
     },
     {
       "month_index": 8,
       "segment": "target",
-      "n": 1927,
-      "cum_revenue": 536.753,
-      "cum_cm": 383.4027
+      "n": 1955,
+      "cum_revenue": 663.8905,
+      "cum_cm": 473.123
     },
     {
       "month_index": 8,
       "segment": "other",
-      "n": 6926,
-      "cum_revenue": 108.0582,
-      "cum_cm": 72.3741
+      "n": 6898,
+      "cum_revenue": 125.3351,
+      "cum_cm": 84.0656
     },
     {
       "month_index": 8,
       "segment": "blended",
       "n": 8853,
-      "cum_revenue": 201.3707,
-      "cum_cm": 140.0745
+      "cum_revenue": 244.2638,
+      "cum_cm": 169.9808
     },
     {
       "month_index": 9,
       "segment": "target",
-      "n": 1501,
-      "cum_revenue": 553.053,
-      "cum_cm": 395.177
+      "n": 1530,
+      "cum_revenue": 702.2172,
+      "cum_cm": 500.1049
     },
     {
       "month_index": 9,
       "segment": "other",
-      "n": 5452,
-      "cum_revenue": 108.9482,
-      "cum_cm": 73.0356
+      "n": 5423,
+      "cum_revenue": 125.41,
+      "cum_cm": 84.0971
     },
     {
       "month_index": 9,
       "segment": "blended",
       "n": 6953,
-      "cum_revenue": 204.8207,
-      "cum_cm": 142.5789
+      "cum_revenue": 252.3358,
+      "cum_cm": 175.6392
     },
     {
       "month_index": 10,
       "segment": "target",
-      "n": 1147,
-      "cum_revenue": 556.7569,
-      "cum_cm": 397.7698
+      "n": 1175,
+      "cum_revenue": 737.2876,
+      "cum_cm": 524.6869
     },
     {
       "month_index": 10,
       "segment": "other",
-      "n": 4270,
-      "cum_revenue": 108.5823,
-      "cum_cm": 72.7637
+      "n": 4242,
+      "cum_revenue": 126.7748,
+      "cum_cm": 85.0784
     },
     {
       "month_index": 10,
       "segment": "blended",
       "n": 5417,
-      "cum_revenue": 203.4791,
-      "cum_cm": 141.5808
+      "cum_revenue": 259.201,
+      "cum_cm": 180.4337
     },
     {
       "month_index": 11,
       "segment": "target",
-      "n": 831,
-      "cum_revenue": 562.3049,
-      "cum_cm": 401.6219
+      "n": 854,
+      "cum_revenue": 776.0504,
+      "cum_cm": 552.0604
     },
     {
       "month_index": 11,
       "segment": "other",
-      "n": 3159,
-      "cum_revenue": 108.4742,
-      "cum_cm": 72.6582
+      "n": 3136,
+      "cum_revenue": 128.0807,
+      "cum_cm": 86.0683
     },
     {
       "month_index": 11,
       "segment": "blended",
       "n": 3990,
-      "cum_revenue": 202.9938,
-      "cum_cm": 141.1717
+      "cum_revenue": 266.769,
+      "cum_cm": 185.807
     },
     {
       "month_index": 12,
       "segment": "target",
-      "n": 542,
-      "cum_revenue": 570.8718,
-      "cum_cm": 407.9281
+      "n": 566,
+      "cum_revenue": 811.5869,
+      "cum_cm": 577.1771
     },
     {
       "month_index": 12,
       "segment": "other",
-      "n": 2140,
-      "cum_revenue": 106.3265,
-      "cum_cm": 71.0778
+      "n": 2116,
+      "cum_revenue": 125.8226,
+      "cum_cm": 84.4097
     },
     {
       "month_index": 12,
       "segment": "blended",
       "n": 2682,
-      "cum_revenue": 200.2055,
-      "cum_cm": 139.1512
+      "cum_revenue": 270.544,
+      "cum_cm": 188.4016
     }
   ]
 }

@@ -50,6 +50,10 @@ export function ValueSplitChart() {
     last && last.other && last.target
       ? (last.target / last.other).toFixed(1)
       : "—";
+  const blendedShareOfTarget =
+    last && last.blended && last.target
+      ? Math.round((last.blended / last.target) * 100)
+      : null;
 
   return (
     <div>
@@ -115,11 +119,21 @@ export function ValueSplitChart() {
       </ResponsiveContainer>
 
       <p className="mt-2 text-xs text-muted">
-        Cumulative {kind} per customer by month of life. {NAME} reach{" "}
-        <span className="font-medium text-ink">{multiple}×</span> the value of
-        everyone else by month {months[months.length - 1]} — and the blended
-        average tracks the lower line, because {NAME} are a minority. Averaging
-        hides the split.
+        Cumulative {kind} per customer by month of life. {NAME} keep
+        replenishing — <span className="font-medium text-ink">{multiple}×</span>{" "}
+        the value of everyone else by month {months[months.length - 1]}, and
+        still climbing — while everyone else plateaus within a few months.
+        {blendedShareOfTarget != null && (
+          <>
+            {" "}
+            The blended average is worth just{" "}
+            <span className="font-medium text-ink">
+              {blendedShareOfTarget}%
+            </span>{" "}
+            of a member of this cohort — it represents neither population.
+            Averaging hides the split.
+          </>
+        )}
       </p>
     </div>
   );

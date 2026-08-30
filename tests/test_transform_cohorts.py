@@ -37,8 +37,10 @@ def test_maturation_curve_is_increasing_and_decelerating(curve: cohorts.Maturati
     assert values.is_monotonic_increasing
     assert values.iloc[0] > 0
     increments = values.diff().dropna()
-    # each month adds less than the previous (repeat-purchase curve flattens)
-    assert (increments.iloc[1:].values <= increments.iloc[:-1].values + 1e-6).all()
+    # a small bump is fine while customers finish assembling a routine (~first 2 months), but
+    # from there the repeat-purchase curve flattens monotonically
+    assert (increments.iloc[3:].values <= increments.iloc[2:-1].values + 1e-6).all()
+    assert increments.iloc[-1] < 0.4 * increments.iloc[0]
 
 
 def test_spend_and_cac_blended_monthly(frames: dict[str, pd.DataFrame]) -> None:

@@ -160,47 +160,71 @@ def _basket(rng: Random, premium_lean: float) -> list[tuple[Sku, int]]:
     return items
 
 
+def _emit_order(
+    rng: Random, customer_id: int, seq: int, when: date, items: list[tuple[Sku, int]]
+) -> GenOrder:
+    discount, tax, refund = _order_totals(rng, items)
+    return GenOrder(
+        id=_FIRST_ORDER_ID + customer_id * 40 + seq,
+        customer_id=customer_id,
+        processed_at=datetime.combine(when, datetime.min.time()).replace(
+            hour=rng.randint(7, 22), minute=rng.randint(0, 59)
+        ),
+        line_items=items,
+        discount=discount,
+        tax=tax,
+        refund=refund,
+    )
+
+
 def _history(
     rng: Random, customer_id: int, acq: date, high_value: bool
 ) -> tuple[list[GenOrder], bool]:
-    """Return the customer's orders and whether they bought >=1 premium SKU."""
+    """A customer's order history: a front-loaded routine-assembly phase, then replenishment
+    that runs until a per-cycle churn draw ends it or the data does.
+
+    Regimen Builders assemble a full routine fast, then keep replenishing with a low monthly
+    churn hazard — so their cumulative value keeps climbing. Everyone else buys once or twice
+    and mostly drops within a few months.
+    """
     if high_value:
-        max_orders = rng.choices([4, 5, 6, 7, 9], weights=[3, 4, 4, 2, 1])[0]
-        premium_lean = 0.62
-        # front-loaded: first few orders land inside the 90-day target window, then it settles
-        gaps = [round(rng.gauss(24, 7)) for _ in range(2)] + [
-            round(rng.gauss(58, 20)) for _ in range(max_orders)
-        ]
+        premium_lean = 0.6
+        assembly = rng.choices([2, 3, 4], weights=[3, 4, 2])[0]
+        assembly_gaps = [round(rng.gauss(26, 9)) for _ in range(assembly)]
+        replen_mean, replen_sd, monthly_churn = 44.0, 13.0, 0.055
     else:
-        max_orders = rng.choices([1, 1, 1, 2, 3, 4], weights=[5, 5, 4, 3, 2, 1])[0]
         premium_lean = 0.16
-        gaps = [round(rng.gauss(82, 30)) for _ in range(max_orders)]
+        assembly = rng.choices([1, 1, 2], weights=[5, 3, 2])[0]
+        assembly_gaps = [round(rng.gauss(64, 26)) for _ in range(assembly)]
+        replen_mean, replen_sd, monthly_churn = 82.0, 34.0, 0.34
 
     orders: list[GenOrder] = []
     when = acq
     bought_premium = False
-    for i in range(max_orders):
+    seq = 0
+
+    for gap in assembly_gaps:
         if when > END:
             break
-        items = _basket(rng, premium_lean if i > 0 else premium_lean * 0.8)
-        if high_value and i == 0 and not any(s.line == "premium" for s, _ in items):
+        items = _basket(rng, premium_lean if seq > 0 else premium_lean * 0.8)
+        if high_value and seq == 0 and not any(s.line == "premium" for s, _ in items):
             items[0] = (rng.choice(_PREMIUM), 1)
         bought_premium = bought_premium or any(s.line == "premium" for s, _ in items)
-        discount, tax, refund = _order_totals(rng, items)
-        orders.append(
-            GenOrder(
-                id=_FIRST_ORDER_ID + customer_id * 20 + i,
-                customer_id=customer_id,
-                processed_at=datetime.combine(when, datetime.min.time()).replace(
-                    hour=rng.randint(7, 22), minute=rng.randint(0, 59)
-                ),
-                line_items=items,
-                discount=discount,
-                tax=tax,
-                refund=refund,
-            )
-        )
-        when = when + timedelta(days=max(6, gaps[i]))
+        orders.append(_emit_order(rng, customer_id, seq, when, items))
+        seq += 1
+        when = when + timedelta(days=max(6, gap))
+
+    while when <= END:
+        cycle = max(12, round(rng.gauss(replen_mean, replen_sd)))
+        churn_prob = 1 - (1 - monthly_churn) ** (cycle / 30)
+        if rng.random() < churn_prob:
+            break
+        items = _basket(rng, premium_lean)
+        bought_premium = bought_premium or any(s.line == "premium" for s, _ in items)
+        orders.append(_emit_order(rng, customer_id, seq, when, items))
+        seq += 1
+        when = when + timedelta(days=cycle)
+
     return orders, bought_premium
 
 
