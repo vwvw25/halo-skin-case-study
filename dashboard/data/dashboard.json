@@ -4,6 +4,8 @@
   "assumptions": {
     "ltv_horizon_months": 12,
     "target_cohort": {
+      "name": "Regimen Builders",
+      "seed_campaign": "LAL 1% \u2014 Regimen Builders",
       "min_orders": 3,
       "window_days": 90,
       "min_aov": 62.0,
@@ -895,7 +897,7 @@
       "realized_share": 0.1429
     },
     {
-      "name": "LAL 1% \u2014 High-AOV Purchasers",
+      "name": "LAL 1% \u2014 Regimen Builders",
       "customers": 1291.0,
       "cac": 41.1488,
       "cm_ltv_12": 217.0931,
@@ -1626,5 +1628,280 @@
         ]
       }
     ]
-  }
+  },
+  "value_by_target": [
+    {
+      "month_index": 0,
+      "segment": "target",
+      "n": 3620,
+      "cum_revenue": 128.3213,
+      "cum_cm": 91.9805
+    },
+    {
+      "month_index": 0,
+      "segment": "other",
+      "n": 12803,
+      "cum_revenue": 67.9197,
+      "cum_cm": 45.2946
+    },
+    {
+      "month_index": 0,
+      "segment": "blended",
+      "n": 16423,
+      "cum_revenue": 81.2336,
+      "cum_cm": 55.5852
+    },
+    {
+      "month_index": 1,
+      "segment": "target",
+      "n": 3620,
+      "cum_revenue": 251.3718,
+      "cum_cm": 180.0779
+    },
+    {
+      "month_index": 1,
+      "segment": "other",
+      "n": 12803,
+      "cum_revenue": 71.4322,
+      "cum_cm": 47.5554
+    },
+    {
+      "month_index": 1,
+      "segment": "blended",
+      "n": 16423,
+      "cum_revenue": 111.095,
+      "cum_cm": 76.7664
+    },
+    {
+      "month_index": 2,
+      "segment": "target",
+      "n": 3620,
+      "cum_revenue": 322.434,
+      "cum_cm": 230.9289
+    },
+    {
+      "month_index": 2,
+      "segment": "other",
+      "n": 12803,
+      "cum_revenue": 78.443,
+      "cum_cm": 52.193
+    },
+    {
+      "month_index": 2,
+      "segment": "blended",
+      "n": 16423,
+      "cum_revenue": 132.2242,
+      "cum_cm": 91.5904
+    },
+    {
+      "month_index": 3,
+      "segment": "target",
+      "n": 3603,
+      "cum_revenue": 366.8286,
+      "cum_cm": 262.5732
+    },
+    {
+      "month_index": 3,
+      "segment": "other",
+      "n": 12728,
+      "cum_revenue": 87.444,
+      "cum_cm": 58.2626
+    },
+    {
+      "month_index": 3,
+      "segment": "blended",
+      "n": 16331,
+      "cum_revenue": 149.0827,
+      "cum_cm": 103.3383
+    },
+    {
+      "month_index": 4,
+      "segment": "target",
+      "n": 3270,
+      "cum_revenue": 418.3799,
+      "cum_cm": 299.3173
+    },
+    {
+      "month_index": 4,
+      "segment": "other",
+      "n": 11517,
+      "cum_revenue": 94.4442,
+      "cum_cm": 63.0223
+    },
+    {
+      "month_index": 4,
+      "segment": "blended",
+      "n": 14787,
+      "cum_revenue": 166.0794,
+      "cum_cm": 115.2766
+    },
+    {
+      "month_index": 5,
+      "segment": "target",
+      "n": 2922,
+      "cum_revenue": 456.9619,
+      "cum_cm": 326.6889
+    },
+    {
+      "month_index": 5,
+      "segment": "other",
+      "n": 10206,
+      "cum_revenue": 99.3189,
+      "cum_cm": 66.3706
+    },
+    {
+      "month_index": 5,
+      "segment": "blended",
+      "n": 13128,
+      "cum_revenue": 178.9223,
+      "cum_cm": 124.3116
+    },
+    {
+      "month_index": 6,
+      "segment": "target",
+      "n": 2603,
+      "cum_revenue": 490.5766,
+      "cum_cm": 350.4908
+    },
+    {
+      "month_index": 6,
+      "segment": "other",
+      "n": 9194,
+      "cum_revenue": 103.6517,
+      "cum_cm": 69.3682
+    },
+    {
+      "month_index": 6,
+      "segment": "blended",
+      "n": 11797,
+      "cum_revenue": 189.0264,
+      "cum_cm": 131.3977
+    },
+    {
+      "month_index": 7,
+      "segment": "target",
+      "n": 2359,
+      "cum_revenue": 518.3182,
+      "cum_cm": 370.3344
+    },
+    {
+      "month_index": 7,
+      "segment": "other",
+      "n": 8296,
+      "cum_revenue": 106.4622,
+      "cum_cm": 71.2685
+    },
+    {
+      "month_index": 7,
+      "segment": "blended",
+      "n": 10655,
+      "cum_revenue": 197.6464,
+      "cum_cm": 137.4812
+    },
+    {
+      "month_index": 8,
+      "segment": "target",
+      "n": 1927,
+      "cum_revenue": 536.753,
+      "cum_cm": 383.4027
+    },
+    {
+      "month_index": 8,
+      "segment": "other",
+      "n": 6926,
+      "cum_revenue": 108.0582,
+      "cum_cm": 72.3741
+    },
+    {
+      "month_index": 8,
+      "segment": "blended",
+      "n": 8853,
+      "cum_revenue": 201.3707,
+      "cum_cm": 140.0745
+    },
+    {
+      "month_index": 9,
+      "segment": "target",
+      "n": 1501,
+      "cum_revenue": 553.053,
+      "cum_cm": 395.177
+    },
+    {
+      "month_index": 9,
+      "segment": "other",
+      "n": 5452,
+      "cum_revenue": 108.9482,
+      "cum_cm": 73.0356
+    },
+    {
+      "month_index": 9,
+      "segment": "blended",
+      "n": 6953,
+      "cum_revenue": 204.8207,
+      "cum_cm": 142.5789
+    },
+    {
+      "month_index": 10,
+      "segment": "target",
+      "n": 1147,
+      "cum_revenue": 556.7569,
+      "cum_cm": 397.7698
+    },
+    {
+      "month_index": 10,
+      "segment": "other",
+      "n": 4270,
+      "cum_revenue": 108.5823,
+      "cum_cm": 72.7637
+    },
+    {
+      "month_index": 10,
+      "segment": "blended",
+      "n": 5417,
+      "cum_revenue": 203.4791,
+      "cum_cm": 141.5808
+    },
+    {
+      "month_index": 11,
+      "segment": "target",
+      "n": 831,
+      "cum_revenue": 562.3049,
+      "cum_cm": 401.6219
+    },
+    {
+      "month_index": 11,
+      "segment": "other",
+      "n": 3159,
+      "cum_revenue": 108.4742,
+      "cum_cm": 72.6582
+    },
+    {
+      "month_index": 11,
+      "segment": "blended",
+      "n": 3990,
+      "cum_revenue": 202.9938,
+      "cum_cm": 141.1717
+    },
+    {
+      "month_index": 12,
+      "segment": "target",
+      "n": 542,
+      "cum_revenue": 570.8718,
+      "cum_cm": 407.9281
+    },
+    {
+      "month_index": 12,
+      "segment": "other",
+      "n": 2140,
+      "cum_revenue": 106.3265,
+      "cum_cm": 71.0778
+    },
+    {
+      "month_index": 12,
+      "segment": "blended",
+      "n": 2682,
+      "cum_revenue": 200.2055,
+      "cum_cm": 139.1512
+    }
+  ]
 }

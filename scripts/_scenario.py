@@ -245,7 +245,7 @@ CAMPAIGNS: tuple[CampaignSpec, ...] = (
     ),
     CampaignSpec(
         id="238500000000005",
-        name="LAL 1% — High-AOV Purchasers",
+        name="LAL 1% — Regimen Builders",
         objective=_OUTCOME_SALES,
         launch=_d(2025, 8, 15),
         end=None,

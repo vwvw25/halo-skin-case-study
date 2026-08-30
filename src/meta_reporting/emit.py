@@ -70,6 +70,8 @@ def build_dashboard_data(
         "assumptions": {
             "ltv_horizon_months": domain.LTV_HORIZON_MONTHS,
             "target_cohort": {
+                "name": domain.TARGET_COHORT_NAME,
+                "seed_campaign": domain.TARGET_COHORT_SEED_CAMPAIGN,
                 "min_orders": domain.TARGET_MIN_ORDERS,
                 "window_days": domain.TARGET_WINDOW_DAYS,
                 "min_aov": domain.TARGET_MIN_AOV,
@@ -141,6 +143,10 @@ def build_dashboard_data(
             ],
         ),
         "cohort_triangle": _cohort_triangle(orders, customers, monthly_spend, as_of=as_of_ts),
+        "value_by_target": _records(
+            cohorts.value_curve_by_target(orders, customers, classified, as_of=as_of_ts),
+            ["month_index", "segment", "n", "cum_revenue", "cum_cm"],
+        ),
     }
 
 

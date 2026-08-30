@@ -3,12 +3,22 @@ import raw from "@/data/dashboard.json";
 export interface Assumptions {
   ltv_horizon_months: number;
   target_cohort: {
+    name: string;
+    seed_campaign: string;
     min_orders: number;
     window_days: number;
     min_aov: number;
     requires_premium_sku: boolean;
   };
   healthy_ltv_cac: number;
+}
+
+export interface ValueByTargetRow {
+  month_index: number;
+  segment: "target" | "other" | "blended";
+  n: number;
+  cum_revenue: number;
+  cum_cm: number;
 }
 
 export interface Headline {
@@ -94,13 +104,19 @@ export interface Dashboard {
   assumptions: Assumptions;
   headline: Headline;
   weekly_trend: WeeklyPoint[];
-  monthly_spend: { period: string; spend: number; new_customers: number; cac: number | null }[];
+  monthly_spend: {
+    period: string;
+    spend: number;
+    new_customers: number;
+    cac: number | null;
+  }[];
   maturation_curve: MaturationPoint[];
   cohort_ltv: CohortPoint[];
   ltv_cac_by_campaign: CampaignRow[];
   ltv_cac_by_strategy: StrategyLtvRow[];
   capture_by_strategy: CaptureRow[];
   cohort_triangle: CohortTriangle;
+  value_by_target: ValueByTargetRow[];
 }
 
 export const dashboard = raw as unknown as Dashboard;

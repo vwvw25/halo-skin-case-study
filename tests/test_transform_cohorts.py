@@ -95,9 +95,9 @@ def test_ltv_cac_ranking_matches_the_story(
     acquisition = out[~out["strategy"].isin(["retargeting", "awareness"])].set_index("name")[
         "ltv_cac"
     ]
-    assert acquisition.idxmax() == "LAL 1% — High-AOV Purchasers"
+    assert acquisition.idxmax() == "LAL 1% — Regimen Builders"
     assert acquisition.idxmin() == "Prospecting — Broad"
-    assert acquisition["LAL 1% — High-AOV Purchasers"] > 2 * acquisition["Prospecting — Broad"]
+    assert acquisition["LAL 1% — Regimen Builders"] > 2 * acquisition["Prospecting — Broad"]
     assert ranked["Retargeting — 14d ATC/VC"] > acquisition.median()
 
 
@@ -139,3 +139,30 @@ def test_cohort_summary_metadata(frames: dict[str, pd.DataFrame]) -> None:
     # recent cohorts have had less time to make a second order
     assert summary.iloc[0]["repeat_rate"] > summary.iloc[-1]["repeat_rate"]
     assert (summary["first_order_revenue"] > summary["first_order_cm"]).all()
+
+
+def test_value_curve_by_target_shows_the_power_law(frames: dict[str, pd.DataFrame]) -> None:
+    from meta_reporting.transform import target_cohort
+
+    classified = target_cohort.classify_customers(
+        frames["orders"], frames["customers"], as_of=AS_OF
+    )
+    curve = cohorts.value_curve_by_target(
+        frames["orders"], frames["customers"], classified, as_of=AS_OF
+    )
+    wide = curve.pivot(index="month_index", columns="segment", values="cum_revenue")
+
+    # the target cohort compounds hard; non-members grow slowly then plateau
+    assert wide["target"].is_monotonic_increasing
+    assert wide["target"].iloc[-1] > 3 * wide["target"].iloc[0]
+    assert wide["other"].iloc[-1] > wide["other"].iloc[0]
+    assert wide["other"].iloc[-1] < 2 * wide["other"].iloc[0]
+
+    # the gap widens every step of the year
+    gap = wide["target"] - wide["other"]
+    assert gap.is_monotonic_increasing
+    assert gap.iloc[-1] > 5 * gap.iloc[0]
+    assert wide["target"].iloc[-1] > 4 * wide["other"].iloc[-1]
+
+    # the blended average hugs the non-member line — that is the whole point
+    assert (wide["blended"] - wide["other"] < wide["target"] - wide["blended"]).all()

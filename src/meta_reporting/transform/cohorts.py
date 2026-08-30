@@ -199,6 +199,64 @@ def cohort_value_curves(
     return pd.DataFrame(rows)
 
 
+def value_curve_by_target(
+    orders: pd.DataFrame,
+    customers: pd.DataFrame,
+    classified: pd.DataFrame,
+    *,
+    as_of: pd.Timestamp,
+    horizon: int = LTV_HORIZON_MONTHS,
+) -> pd.DataFrame:
+    """Cumulative value per customer by month of life, split target / non-target / blended.
+
+    Only customers matured past the target window carry a verdict, so this compares the
+    *realized* behaviour of confirmed target-cohort members against confirmed non-members —
+    which is where the power law shows up: the average sits close to the non-member line
+    because most customers are non-members, and the two populations diverge every month.
+
+    Long: one row per (month_index, segment) with ``cum_revenue`` / ``cum_cm`` (per customer)
+    and ``n`` (customers in that segment observed at least that long).
+    """
+    verdict = classified.loc[classified["matured"], ["customer_id", "is_target"]]
+    cust = customers[["customer_id", "acquisition_month"]].merge(verdict, on="customer_id")
+    cust["observed"] = _month_index(
+        cust["acquisition_month"], pd.Series(as_of, index=cust.index)
+    ).clip(upper=horizon)
+
+    joined = orders.merge(cust, on="customer_id")
+    joined["m"] = _month_index(joined["acquisition_month"], joined["order_date"])
+    joined = joined[(joined["m"] >= 0) & (joined["m"] <= horizon)]
+    increments = (
+        joined.groupby(["customer_id", "m"])
+        .agg(rev=("net_revenue", "sum"), cm=("contribution_margin", "sum"))
+        .reset_index()
+    )
+
+    segments = {
+        "target": cust["is_target"].fillna(False),
+        "other": ~cust["is_target"].fillna(True),
+        "blended": pd.Series(True, index=cust.index),
+    }
+    rows: list[dict[str, object]] = []
+    for month in range(horizon + 1):
+        for label, mask in segments.items():
+            group = cust[mask & (cust["observed"] >= month)]
+            if group.empty:
+                continue
+            ids = set(group["customer_id"])
+            booked = increments[increments["customer_id"].isin(ids) & (increments["m"] <= month)]
+            rows.append(
+                {
+                    "month_index": month,
+                    "segment": label,
+                    "n": len(group),
+                    "cum_revenue": float(booked["rev"].sum()) / len(group),
+                    "cum_cm": float(booked["cm"].sum()) / len(group),
+                }
+            )
+    return pd.DataFrame(rows)
+
+
 def cohort_summary(
     orders: pd.DataFrame,
     customers: pd.DataFrame,

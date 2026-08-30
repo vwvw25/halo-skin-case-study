@@ -27,12 +27,19 @@ PAYMENT_FEE_FLAT: Final = 0.30
 
 # --- target cohort ----------------------------------------------------------------------
 
+TARGET_COHORT_NAME: Final = "Regimen Builders"
+"""The name Halo Skin gives its high-value customer — someone standing up a full skincare
+routine fast. The lookalike audience built to find them carries the same name."""
+
+TARGET_COHORT_SEED_CAMPAIGN: Final = "LAL 1% — Regimen Builders"
+"""The Meta campaign whose audience is a lookalike seeded from this cohort."""
+
 TARGET_WINDOW_DAYS: Final = 90
 TARGET_MIN_ORDERS: Final = 3
 TARGET_MIN_AOV: Final = 62.0
 TARGET_REQUIRE_PREMIUM_SKU: Final = True
-"""Halo Skin's high-value customer, judged on the first 90 days: at least 3 orders, average
-order value at or above TARGET_MIN_AOV, and at least one purchase from the premium SKU line."""
+"""A Regimen Builder, judged on the first 90 days: at least 3 orders, average order value at or
+above TARGET_MIN_AOV, and at least one purchase from the premium SKU line."""
 
 TARGET_EARLY_SIGNAL_DAYS: Final = 30
 """For customers younger than the 90-day window, target-cohort membership is *predicted* from

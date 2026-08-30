@@ -43,7 +43,7 @@ def total_spend(rows: Sequence[InsightsRow]) -> float:
 def test_list_campaigns() -> None:
     campaigns = client.list_campaigns()
     assert len(campaigns) == 10
-    lal = next(c for c in campaigns if c.name == "LAL 1% — High-AOV Purchasers")
+    lal = next(c for c in campaigns if c.name == "LAL 1% — Regimen Builders")
     assert lal.objective == "OUTCOME_SALES"
     assert lal.id == "238500000000005"
 

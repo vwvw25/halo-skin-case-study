@@ -2,9 +2,15 @@ import { dashboard } from "@/lib/data";
 import { monthLabel } from "@/lib/format";
 
 /** Acquisition months present in the snapshot, ascending ISO (yyyy-mm-01). */
-export const MONTHS: string[] = dashboard.cohort_triangle.rows.map((r) => r.acquired);
+export const MONTHS: string[] = dashboard.cohort_triangle.rows.map(
+  (r) => r.acquired,
+);
 
-export const MONTH_OPTIONS = MONTHS.map((iso, index) => ({ index, iso, label: monthLabel(iso) }));
+export const MONTH_OPTIONS = MONTHS.map((iso, index) => ({
+  index,
+  iso,
+  label: monthLabel(iso),
+}));
 
 export interface Period {
   fromIndex: number;
@@ -13,7 +19,11 @@ export interface Period {
 
 export const FULL_PERIOD: Period = { fromIndex: 0, toIndex: MONTHS.length - 1 };
 
-export function periodBounds(period: Period): { start: Date; end: Date; months: string[] } {
+export function periodBounds(period: Period): {
+  start: Date;
+  end: Date;
+  months: string[];
+} {
   const lo = Math.min(period.fromIndex, period.toIndex);
   const hi = Math.max(period.fromIndex, period.toIndex);
   const start = new Date(MONTHS[lo] + "T00:00:00");

@@ -44,7 +44,7 @@ def test_headline_numbers_are_sane(data: dict[str, object]) -> None:
 def test_series_are_populated_and_json_clean(data: dict[str, object]) -> None:
     assert len(data["weekly_trend"]) > 40
     assert len(data["maturation_curve"]) == data["assumptions"]["ltv_horizon_months"] + 1
-    assert {r["name"] for r in data["ltv_cac_by_campaign"]} >= {"LAL 1% — High-AOV Purchasers"}
+    assert {r["name"] for r in data["ltv_cac_by_campaign"]} >= {"LAL 1% — Regimen Builders"}
     # fully serialisable, no NaN / Timestamp leaked
     dumped = json.dumps(data)
     assert "NaN" not in dumped
@@ -90,3 +90,17 @@ def test_cohort_triangle_shape(data: dict[str, object]) -> None:
         cm = [v for v in row["cm"] if v is not None]
         assert rev == sorted(rev)
         assert all(c < r for c, r in zip(cm, rev, strict=True))
+
+
+def test_value_by_target_and_cohort_name(data: dict[str, object]) -> None:
+    tc = data["assumptions"]["target_cohort"]
+    assert tc["name"] == "Regimen Builders"
+    assert tc["seed_campaign"] == "LAL 1% — Regimen Builders"
+
+    rows = data["value_by_target"]
+    segments = {r["segment"] for r in rows}
+    assert segments == {"target", "other", "blended"}
+    latest = max(x["month_index"] for x in rows)
+    last = {r["segment"]: r for r in rows if r["month_index"] == latest}
+    assert last["target"]["cum_revenue"] > 3 * last["other"]["cum_revenue"]
+    assert last["blended"]["cum_revenue"] < last["target"]["cum_revenue"]

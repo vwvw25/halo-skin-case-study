@@ -51,7 +51,7 @@ def test_monthly_context(monthly: ReportContext) -> None:
         "capture_by_strategy",
     } <= (monthly.charts.keys())
     assert len(monthly.tables) == 2
-    assert any("LAL 1% — High-AOV" in " ".join(row) for row in monthly.tables[0].rows)
+    assert any("LAL 1% — Regimen Builders" in " ".join(row) for row in monthly.tables[0].rows)
 
 
 def test_monthly_narrative_flags_the_retargeting_trap(monthly: ReportContext) -> None:
