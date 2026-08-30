@@ -1,6 +1,7 @@
 # Meta Ads Reporting — Plan of Record
 
-**Status:** design agreed, not yet built.
+**Status:** milestones 1–12 built and running under CI. Dashboard live at
+<https://halo-skin-dashboard.vercel.app>. Remaining: §"Still open" at the end.
 **Repo:** new, public GitHub repo (name TBD — suggest `meta-ads-ltv-reporting`).
 **Nature:** portfolio project. Built against the real Meta Marketing API contract and a realistic
 Shopify data model; ships with mock data providers so it runs end-to-end with no credentials.
@@ -275,23 +276,23 @@ No secrets committed; `.env.example` documents everything.
 
 ## 12. Milestones
 
-1. Repo scaffold: `pyproject.toml`, `uv`, README skeleton, CI lint/test job, `.env.example`.
-2. `sources/meta` types + mock client + `generate_meta_fixtures.py` + fixtures.
-3. `sources/shopify` types + mock client + `generate_shopify_fixtures.py` + fixtures.
-4. `ingest.py` + `transform/acquisition.py` (CAC, spend by segment) + tests.
-5. `transform/cohorts.py` — cohorts, curve fit, realized + projected CM-LTV + tests.
-6. `transform/ltv_cac.py` + `transform/target_cohort.py` + tests.
-7. `report/` weekly template + charts + WeasyPrint render → first weekly PDF in `reports/`.
-8. `report/` monthly template → first monthly PDF in `reports/`.
-9. `emit.py` → `data/report_<date>.json`; `deliver.py` interface + Local/Drive/Email impls
-   (Drive/Email unit-tested, not wired live).
-10. `pipeline.py` weekly + monthly entrypoints, end to end.
-11. Next.js dashboard reading the emitted JSON; deploy to Vercel.
-12. `weekly-report.yml` + `monthly-report.yml` workflows.
-13. Real `sources/meta/client.py` against the live Insights contract; `sources/shopify/client.py`
-    stub fleshed out. Keep mock/real interfaces in lockstep.
-14. README polish: architecture diagram, sample PDFs, dashboard screenshots/link, "how to point
-    at a real account".
+1. ✅ Repo scaffold: `pyproject.toml`, `uv`, README skeleton, CI lint/test job, `.env.example`.
+2. ✅ `sources/meta` types + mock client + `generate_meta_fixtures.py` + fixtures.
+3. ✅ `sources/shopify` types + mock client + `generate_shopify_fixtures.py` + fixtures.
+4. ✅ `ingest.py` + `transform/spend.py` (CAC, spend by segment) + tests.
+5. ✅ `transform/cohorts.py` — cohorts, maturation curve, realized + projected CM-LTV + tests.
+6. ✅ `transform/ltv_cac.py` + `transform/target_cohort.py` + `transform/acquisition.py` + tests.
+7. ✅ `report/` weekly template + charts + WeasyPrint render.
+8. ✅ `report/` monthly template.
+9. ✅ `emit.py` → `data/dashboard.json`; `deliver.py` — Local / Drive / Email, unit-tested.
+10. ✅ `pipeline.py` weekly + monthly entrypoints, end to end (`halo-report`).
+11. ✅ Next.js dashboard reading the emitted JSON; deployed to Vercel.
+12. ✅ `weekly-report.yml` + `monthly-report.yml` (+ reusable `_report.yml`) workflows.
+13. ⬜ Tighten the live `sources/meta/client.py` / `sources/shopify/client.py` — contract-complete
+    and unit-tested; could add real-shaped integration fixtures. Keep in lockstep with the mocks.
+14. ⬜ README polish: architecture diagram, sample PDF + dashboard screenshots.
+
+Deferred: **Loyal Core** — see [docs/loyal-core-spec.md](docs/loyal-core-spec.md).
 
 ---
 
@@ -313,4 +314,10 @@ No secrets committed; `.env.example` documents everything.
 
 ## Still open
 
-- Dashboard: confirm Vercel deploy (vs local-only + screenshots in README).
+1. **Loyal Core** (deferred, spec'd) — [docs/loyal-core-spec.md](docs/loyal-core-spec.md). The
+   retrospective cohort + signal-vs-outcome analysis. Highest-value remaining item.
+2. **Milestone 13** — live-client integration fixtures.
+3. **Milestone 14** — architecture diagram + sample screenshots in the README.
+
+Everything else is done and running under CI; the dashboard is live at
+<https://halo-skin-dashboard.vercel.app>.
