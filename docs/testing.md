@@ -73,11 +73,11 @@ Since these can't hit a live API, each test injects a **`FakeSession`** — a st
 
 ```python
 session = FakeSession(
-    FakeResponse(503, text="try later"),   # first call fails
-    FakeResponse(200, {"data": []}),       # retry succeeds
+    FakeResponse(503, text="try later"),  # first call fails
+    FakeResponse(200, {"data": []}),  # retry succeeds
 )
 rows = _client(session).get_insights(...)
-assert len(session.calls) == 2             # it retried once
+assert len(session.calls) == 2  # it retried once
 ```
 
 This exercises the parts of real HTTP code that are easy to get wrong: cursor pagination
