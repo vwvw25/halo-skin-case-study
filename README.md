@@ -11,7 +11,7 @@ and produces:
 
 - a **weekly** operational PDF (spend, CAC, leading LTV indicators, tactical actions),
 - a **monthly** strategic PDF (cohort maturation, realized LTV:CAC by segment, budget moves),
-- an always-on **Next.js dashboard** → **[halo-skin-dashboard.vercel.app](https://halo-skin-dashboard.vercel.app)**.
+- an always-on **Next.js dashboard** → **[halo-skin-dashbaord.vercel.app](https://halo-skin-dashbaord.vercel.app)**.
 
 It is built against the real API contracts but ships with **mock data providers**, so it runs
 end to end with no credentials. Point it at a real ad account and Shopify store by setting a few
