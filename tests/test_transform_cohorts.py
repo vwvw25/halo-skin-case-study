@@ -111,3 +111,31 @@ def test_payback_is_within_horizon_for_healthy_segments(
     out = ltv_cac_by_segment(cl, sc, curve, by="strategy").set_index("strategy")
     assert out.loc["lookalike", "payback_months"] <= 3
     assert out.loc["prospecting_broad", "payback_months"] >= out.loc["lookalike", "payback_months"]
+
+
+def test_cohort_value_curves_are_cumulative_and_triangular(
+    frames: dict[str, pd.DataFrame],
+) -> None:
+    curves = cohorts.cohort_value_curves(frames["orders"], frames["customers"], as_of=AS_OF)
+    assert {"acquisition_month", "month_index", "cum_revenue", "cum_cm"} <= set(curves.columns)
+
+    for _, cohort in curves.groupby("acquisition_month"):
+        ordered = cohort.sort_values("month_index")
+        assert ordered["cum_revenue"].is_monotonic_increasing
+        assert (ordered["cum_cm"] < ordered["cum_revenue"]).all()  # margin < revenue
+
+    # the oldest cohort is observed for more months than the newest — the triangle shape
+    span = curves.groupby("acquisition_month")["month_index"].max()
+    assert span.iloc[0] > span.iloc[-1]
+    assert span.iloc[0] == LTV_HORIZON_MONTHS
+
+
+def test_cohort_summary_metadata(frames: dict[str, pd.DataFrame]) -> None:
+    monthly_cac = spend.spend_and_cac(frames["meta_daily"], frames["customers"], freq="M")
+    summary = cohorts.cohort_summary(frames["orders"], frames["customers"], monthly_cac)
+
+    assert (summary["cohort_size"] > 0).all()
+    assert summary["repeat_rate"].between(0, 1).all()
+    # recent cohorts have had less time to make a second order
+    assert summary.iloc[0]["repeat_rate"] > summary.iloc[-1]["repeat_rate"]
+    assert (summary["first_order_revenue"] > summary["first_order_cm"]).all()

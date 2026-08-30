@@ -1,5 +1,6 @@
 import { Card } from "@/components/Card";
 import { CampaignTable } from "@/components/CampaignTable";
+import { CohortTable } from "@/components/CohortTable";
 import { KpiRow } from "@/components/KpiRow";
 import { MaturationChart } from "@/components/MaturationChart";
 import { SegmentScatter } from "@/components/SegmentScatter";
@@ -50,6 +51,15 @@ export default function Page() {
           subtitle="CM-LTV per customer by acquisition month — realized to date vs projected to 12 months"
         >
           <MaturationChart />
+        </Card>
+      </div>
+
+      <div className="mt-4">
+        <Card
+          title="Cumulative value per customer"
+          subtitle="Each acquisition cohort's cumulative revenue (or contribution margin) per customer, by month of life. Triangular because recent cohorts have fewer months of history."
+        >
+          <CohortTable />
         </Card>
       </div>
 

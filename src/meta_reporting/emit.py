@@ -140,7 +140,55 @@ def build_dashboard_data(
                 "blended_capture_rate",
             ],
         ),
+        "cohort_triangle": _cohort_triangle(orders, customers, monthly_spend, as_of=as_of_ts),
     }
+
+
+def _cohort_triangle(
+    orders: pd.DataFrame,
+    customers: pd.DataFrame,
+    monthly_spend: pd.DataFrame,
+    *,
+    as_of: pd.Timestamp,
+) -> dict[str, Any]:
+    curves = cohorts.cohort_value_curves(orders, customers, as_of=as_of)
+    summary = cohorts.cohort_summary(orders, customers, monthly_spend).set_index(
+        "acquisition_month"
+    )
+
+    rev = curves.pivot(index="acquisition_month", columns="month_index", values="cum_revenue")
+    cm = curves.pivot(index="acquisition_month", columns="month_index", values="cum_cm")
+    months = sorted(int(m) for m in rev.columns)
+
+    rows: list[dict[str, Any]] = []
+    for month in rev.index:
+        meta = summary.loc[month] if month in summary.index else None
+        rev_series = [
+            None if pd.isna(rev.loc[month, m]) else round(float(rev.loc[month, m]), 2)
+            for m in months
+        ]
+        cm_series = [
+            None if pd.isna(cm.loc[month, m]) else round(float(cm.loc[month, m]), 2) for m in months
+        ]
+        rows.append(
+            {
+                "acquired": month.date().isoformat(),
+                "cohort_size": int(meta["cohort_size"]) if meta is not None else 0,
+                "repeat_rate": _round(float(meta["repeat_rate"])) if meta is not None else None,
+                "cac": _round(float(meta["cac"]))
+                if meta is not None and pd.notna(meta["cac"])
+                else None,
+                "first_order_revenue": _round(float(meta["first_order_revenue"]))
+                if meta is not None
+                else None,
+                "first_order_cm": _round(float(meta["first_order_cm"]))
+                if meta is not None
+                else None,
+                "revenue": rev_series,
+                "cm": cm_series,
+            }
+        )
+    return {"months": months, "rows": rows}
 
 
 def write_dashboard_data(data: dict[str, Any], out_dir: Path) -> Path:

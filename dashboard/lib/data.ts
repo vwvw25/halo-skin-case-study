@@ -72,6 +72,22 @@ export interface CaptureRow {
   blended_capture_rate: number | null;
 }
 
+export interface CohortTriangleRow {
+  acquired: string;
+  cohort_size: number;
+  repeat_rate: number | null;
+  cac: number | null;
+  first_order_revenue: number | null;
+  first_order_cm: number | null;
+  revenue: (number | null)[];
+  cm: (number | null)[];
+}
+
+export interface CohortTriangle {
+  months: number[];
+  rows: CohortTriangleRow[];
+}
+
 export interface Dashboard {
   brand: string;
   as_of: string;
@@ -84,6 +100,7 @@ export interface Dashboard {
   ltv_cac_by_campaign: CampaignRow[];
   ltv_cac_by_strategy: StrategyLtvRow[];
   capture_by_strategy: CaptureRow[];
+  cohort_triangle: CohortTriangle;
 }
 
 export const dashboard = raw as unknown as Dashboard;

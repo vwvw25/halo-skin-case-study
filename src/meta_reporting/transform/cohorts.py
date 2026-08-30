@@ -155,3 +155,89 @@ def cohort_ltv(
     )
     out["maturity"] = np.where(out["observed_age_months"] >= horizon, "realized", "projected")
     return out.sort_values(group_cols).reset_index(drop=True)
+
+
+def cohort_value_curves(
+    orders: pd.DataFrame,
+    customers: pd.DataFrame,
+    *,
+    as_of: pd.Timestamp,
+    horizon: int = LTV_HORIZON_MONTHS,
+) -> pd.DataFrame:
+    """The cohort triangle: cumulative value **per acquired customer** by month of life.
+
+    One row per (acquisition month, month index), month index 0 = the acquisition month.
+    Columns: ``cum_revenue``, ``cum_cm``. A cohort only has rows up to the month index it has
+    actually been observed to (``as_of``), which is what gives the table its triangular shape.
+    """
+    cust = customers[["customer_id", "acquisition_month"]]
+    sizes = cust.groupby("acquisition_month").size()
+
+    joined = orders.merge(cust, on="customer_id")
+    joined["m"] = _month_index(joined["acquisition_month"], joined["order_date"])
+    joined = joined[(joined["m"] >= 0) & (joined["m"] <= horizon)]
+    increments = joined.groupby(["acquisition_month", "m"]).agg(
+        rev=("net_revenue", "sum"), cm=("contribution_margin", "sum")
+    )
+
+    rows: list[dict[str, object]] = []
+    for month, size in sizes.items():
+        observed = int(_month_index(pd.Series([month]), pd.Series([as_of])).iloc[0])
+        cum_rev = cum_cm = 0.0
+        for m in range(min(horizon, max(observed, 0)) + 1):
+            if (month, m) in increments.index:
+                cum_rev += float(increments.loc[(month, m), "rev"])
+                cum_cm += float(increments.loc[(month, m), "cm"])
+            rows.append(
+                {
+                    "acquisition_month": month,
+                    "month_index": m,
+                    "cum_revenue": cum_rev / size,
+                    "cum_cm": cum_cm / size,
+                }
+            )
+    return pd.DataFrame(rows)
+
+
+def cohort_summary(
+    orders: pd.DataFrame,
+    customers: pd.DataFrame,
+    monthly_cac: pd.DataFrame,
+    *,
+    horizon: int = LTV_HORIZON_MONTHS,
+) -> pd.DataFrame:
+    """Per acquisition-month metadata for the triangle: size, repeat rate, CAC, first-order value.
+
+    ``monthly_cac`` is the output of ``spend.spend_and_cac(freq="M")``.
+    """
+    cust = customers[["customer_id", "acquisition_month"]]
+    joined = orders.merge(cust, on="customer_id")
+
+    orders_per_customer = joined.groupby("customer_id").size()
+    firsts = (
+        joined.sort_values("order_date")
+        .groupby("customer_id")
+        .first()[["net_revenue", "contribution_margin", "acquisition_month"]]
+    )
+
+    size = cust.groupby("acquisition_month").size().rename("cohort_size")
+    repeat = (
+        cust.assign(repeated=cust["customer_id"].map(orders_per_customer).fillna(0).ge(2))
+        .groupby("acquisition_month")["repeated"]
+        .mean()
+        .rename("repeat_rate")
+    )
+    first_order = firsts.groupby("acquisition_month").agg(
+        first_order_revenue=("net_revenue", "mean"),
+        first_order_cm=("contribution_margin", "mean"),
+    )
+    cac = monthly_cac.set_index("period")["cac"].rename("cac")
+    cac.index.name = "acquisition_month"
+
+    return (
+        pd.concat([size, repeat, first_order, cac], axis=1)
+        .reset_index()
+        .rename(columns={"index": "acquisition_month"})
+        .sort_values("acquisition_month")
+        .reset_index(drop=True)
+    )

@@ -68,3 +68,25 @@ def test_capture_by_strategy_has_realized_and_predicted(data: dict[str, object])
         r for r in data["capture_by_strategy"] if r["acquisition_strategy"] == "prospecting_broad"
     )
     assert lookalike["realized_capture_rate"] > broad["realized_capture_rate"]
+
+
+def test_cohort_triangle_shape(data: dict[str, object]) -> None:
+    tri = data["cohort_triangle"]
+    assert tri["months"][0] == 0
+    rows = tri["rows"]
+    assert len(rows) >= 12
+    first, last = rows[0], rows[-1]
+
+    # oldest cohort: full history, older customers, high repeat
+    assert sum(1 for v in first["revenue"] if v is not None) == len(tri["months"])
+    assert first["repeat_rate"] > last["repeat_rate"]
+
+    # newest cohort: only month 0 observed
+    assert sum(1 for v in last["revenue"] if v is not None) == 1
+
+    # cumulative revenue rises and stays above cumulative margin
+    for row in rows:
+        rev = [v for v in row["revenue"] if v is not None]
+        cm = [v for v in row["cm"] if v is not None]
+        assert rev == sorted(rev)
+        assert all(c < r for c, r in zip(cm, rev, strict=True))
