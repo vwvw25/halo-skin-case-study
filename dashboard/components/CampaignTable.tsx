@@ -9,7 +9,9 @@ export function CampaignTable() {
 
   return (
     <div className="overflow-x-auto">
-      <p className="mb-2 text-xs text-muted">CM-LTV is the projected 12-month contribution margin per customer.</p>
+      <p className="mb-2 text-xs text-muted">
+        CM-LTV is the projected 12-month contribution margin per customer.
+      </p>
       <table className="w-full text-sm">
         <thead>
           <tr className="border-b border-ink text-left text-[11px] uppercase tracking-wide text-muted [&>th]:whitespace-nowrap">
@@ -26,9 +28,15 @@ export function CampaignTable() {
           {rows.map((r) => (
             <tr key={r.name} className="border-b border-line last:border-ink">
               <td className="py-2 pr-3 text-ink">{r.name}</td>
-              <td className="py-2 px-3 text-right tabular-nums">{count(r.customers)}</td>
-              <td className="py-2 px-3 text-right tabular-nums">{usd(r.cac, 2)}</td>
-              <td className="py-2 px-3 text-right tabular-nums">{usd(r.cm_ltv_12)}</td>
+              <td className="py-2 px-3 text-right tabular-nums">
+                {count(r.customers)}
+              </td>
+              <td className="py-2 px-3 text-right tabular-nums">
+                {usd(r.cac, 2)}
+              </td>
+              <td className="py-2 px-3 text-right tabular-nums">
+                {usd(r.cm_ltv_12)}
+              </td>
               <td
                 className={`py-2 px-3 text-right font-semibold tabular-nums ${
                   (r.ltv_cac ?? 0) >= healthy
@@ -40,7 +48,9 @@ export function CampaignTable() {
               >
                 {ratio(r.ltv_cac)}
               </td>
-              <td className="py-2 px-3 text-right tabular-nums">{payback(r.payback_months)}</td>
+              <td className="py-2 px-3 text-right tabular-nums">
+                {payback(r.payback_months)}
+              </td>
               <td className="py-2 pl-3 text-right tabular-nums text-muted">
                 {pct(r.realized_share)}
               </td>

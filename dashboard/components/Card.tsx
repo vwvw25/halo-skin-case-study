@@ -10,7 +10,9 @@ export function Card({
   className?: string;
 }) {
   return (
-    <section className={`rounded-lg border border-line bg-surface p-5 ${className}`}>
+    <section
+      className={`rounded-lg border border-line bg-surface p-5 ${className}`}
+    >
       {title && (
         <header className="mb-3">
           <h2 className="text-sm font-semibold text-ink">{title}</h2>
