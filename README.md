@@ -118,6 +118,8 @@ The suite runs against deterministic mock fixtures — no live API calls. See
 
 - [docs/data-sources.md](docs/data-sources.md) — the built-for-real-APIs / runs-on-mock-data seam
 - [docs/testing.md](docs/testing.md) — what the test suite covers and why
+- [docs/loyal-core-spec.md](docs/loyal-core-spec.md) — spec for the next feature: the
+  retrospective "Loyal Core" cohort and the signal-vs-outcome analysis (designed, not built)
 - [docs/next-project.md](docs/next-project.md) — where this goes next: a conversational
   analytics platform built on this transform layer
 
