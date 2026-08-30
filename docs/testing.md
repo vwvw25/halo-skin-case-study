@@ -1,6 +1,6 @@
 # Testing
 
-**101 tests across 14 files** (~1,350 lines), run on every push and pull request.
+**106 tests across 14 files** (~1,350 lines), run on every push and pull request.
 
 ```bash
 uv run pytest          # ~28 seconds locally
@@ -14,7 +14,7 @@ Every commit to `main` and every PR runs all three; all must pass.
 |---|---|---|
 | Lint + format | `ruff check .` / `ruff format --check .` | import order, unused names, line length, style drift |
 | Types | `mypy` (strict) | signature mismatches, `None` handling, wrong argument types |
-| Tests | `pytest` | behaviour — the 101 tests below |
+| Tests | `pytest` | behaviour — the 106 tests below |
 
 `mypy` runs strict everywhere. The pandas-heavy modules (`ingest`, `transform.*`, `report.*`,
 `emit`) keep fully typed function signatures but relax the *internal* dataframe-expression

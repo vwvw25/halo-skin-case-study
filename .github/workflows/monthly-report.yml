@@ -1,0 +1,24 @@
+name: Monthly report
+
+# Strategic deep-dive — cohort maturation, LTV:CAC by campaign, target-cohort capture.
+# Runs on the 1st at 06:00 UTC and can be triggered by hand.
+
+on:
+  schedule:
+    - cron: "0 6 1 * *"
+  workflow_dispatch:
+    inputs:
+      as_of:
+        description: "Report date (YYYY-MM-DD)"
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  report:
+    uses: ./.github/workflows/_report.yml
+    with:
+      cadence: monthly
+      as_of: ${{ inputs.as_of }}
+    secrets: inherit

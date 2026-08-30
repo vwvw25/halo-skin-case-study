@@ -1,0 +1,26 @@
+name: Weekly report
+
+# Operational report — spend, CAC, acquisition, early LTV signals, week over week.
+# Runs Monday 06:00 UTC and can be triggered by hand. Against the mock sources the
+# committed data rarely changes; the PDF is always produced and uploaded as an artifact.
+# Point META_REPORTING_MODE=live (+ credentials) at a real account to make it live.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+    inputs:
+      as_of:
+        description: "Report date (YYYY-MM-DD)"
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  report:
+    uses: ./.github/workflows/_report.yml
+    with:
+      cadence: weekly
+      as_of: ${{ inputs.as_of }}
+    secrets: inherit

@@ -1,5 +1,7 @@
 # Halo Skin — Meta Ads LTV:CAC Reporting
 
+[![CI](https://github.com/vwvw25/halo-skin-case-study/actions/workflows/ci.yml/badge.svg)](https://github.com/vwvw25/halo-skin-case-study/actions/workflows/ci.yml)
+
 A portfolio case study: an automated pipeline that answers the question performance marketers
 actually care about — **which Meta ad choices acquire customers worth more over time than they
 cost to acquire** — not just "what was our ROAS this week."
@@ -48,12 +50,26 @@ uv run halo-report monthly --deliver   # also send via DELIVER_CHANNEL
 
 ### Dashboard
 
-`dashboard/` is a static Next.js app that reads `data/dashboard.json`. It deploys to Vercel
-(set the project's Root Directory to `dashboard`).
+`dashboard/` is a Next.js app (prerendered, no runtime backend) that reads `data/dashboard.json`.
+Deployed on Vercel with Root Directory `dashboard`; a `prebuild` step syncs the data file in.
 
 ```bash
 cd dashboard && npm install && npm run dev
 ```
+
+### Automated reports
+
+Two scheduled GitHub Actions run the pipeline and publish the result:
+
+| Workflow | Schedule | Output |
+|---|---|---|
+| [`weekly-report.yml`](.github/workflows/weekly-report.yml) | Mondays 06:00 UTC | weekly PDF as a run artifact |
+| [`monthly-report.yml`](.github/workflows/monthly-report.yml) | 1st of month 06:00 UTC | monthly PDF as a run artifact |
+
+Both also refresh `data/dashboard.json` (which redeploys the dashboard) and, if a
+`DELIVER_CHANNEL` repo variable is set, deliver the PDF via `deliver.py`. `workflow_dispatch`
+triggers either by hand with an optional `--as-of` date. Against the mock sources the data is
+deterministic so the commit is usually a no-op; the PDF artifact is produced every run.
 
 ## Configuration
 
@@ -82,9 +98,10 @@ you need:
 | 8. Monthly PDF — strategic deep-dive (cohort maturation, LTV:CAC, capture) | ✅ |
 | 9. `emit.py` (dashboard JSON) + `deliver.py` (Local / Drive / Email) | ✅ |
 | 10. `pipeline.py` — pull → transform → render → emit → deliver | ✅ |
-| 11. Next.js dashboard (static export, Recharts, deploys to Vercel) | ✅ |
-| 12. GitHub Actions weekly/monthly cron workflows | ⬜ |
-| 13–14. Live API client polish, README previews | ⬜ |
+| 11. Next.js dashboard (Recharts, deployed on Vercel) | ✅ |
+| 12. GitHub Actions weekly/monthly report workflows | ✅ |
+| 13. Live API client polish (kept in lockstep with the mocks) | ⬜ |
+| 14. README previews (architecture diagram, sample PDF/dashboard shots) | ⬜ |
 
 ## Development
 
@@ -94,8 +111,8 @@ uv run mypy
 uv run pytest
 ```
 
-101 tests run against deterministic mock fixtures — no live API calls. See
-[docs/testing.md](docs/testing.md) for what they cover and why.
+The suite runs against deterministic mock fixtures — no live API calls. See
+[docs/testing.md](docs/testing.md) for what it covers and why.
 
 ## Docs
 

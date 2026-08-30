@@ -1,0 +1,86 @@
+name: report (reusable)
+
+# Shared body for weekly-report.yml and monthly-report.yml:
+#   pull -> transform -> render PDF -> emit dashboard JSON -> (optional) deliver
+# then commit the refreshed dashboard data (which redeploys the Vercel dashboard)
+# and upload the PDF as a workflow artifact.
+
+on:
+  workflow_call:
+    inputs:
+      cadence:
+        required: true
+        type: string
+      as_of:
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install WeasyPrint system libraries
+        run: sudo apt-get update && sudo apt-get install -y libpango-1.0-0 libpangoft2-1.0-0
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        run: uv python install 3.12
+
+      - name: Sync dependencies
+        run: uv sync --extra dev
+
+      - name: Build the report
+        env:
+          META_REPORTING_MODE: ${{ vars.META_REPORTING_MODE || 'mock' }}
+          META_SOURCE: ${{ vars.META_SOURCE }}
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+          META_AD_ACCOUNT_ID: ${{ secrets.META_AD_ACCOUNT_ID }}
+          META_API_VERSION: ${{ vars.META_API_VERSION }}
+          SHOPIFY_SOURCE: ${{ vars.SHOPIFY_SOURCE }}
+          SHOPIFY_STORE: ${{ secrets.SHOPIFY_STORE }}
+          SHOPIFY_ADMIN_TOKEN: ${{ secrets.SHOPIFY_ADMIN_TOKEN }}
+          DELIVER_CHANNEL: ${{ vars.DELIVER_CHANNEL }}
+          DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+          EMAIL_SMTP_HOST: ${{ secrets.EMAIL_SMTP_HOST }}
+          EMAIL_SMTP_PORT: ${{ vars.EMAIL_SMTP_PORT }}
+          EMAIL_USERNAME: ${{ secrets.EMAIL_USERNAME }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_TO: ${{ vars.EMAIL_TO }}
+        run: |
+          ASOF_ARG=""
+          if [ -n "${{ inputs.as_of }}" ]; then ASOF_ARG="--as-of ${{ inputs.as_of }}"; fi
+          DELIVER_ARG=""
+          if [ -n "${{ vars.DELIVER_CHANNEL }}" ]; then DELIVER_ARG="--deliver"; fi
+          uv run halo-report ${{ inputs.cadence }} $ASOF_ARG $DELIVER_ARG
+
+      - name: Commit refreshed dashboard data
+        run: |
+          cp data/dashboard.json dashboard/data/dashboard.json
+          if git diff --quiet -- data/dashboard.json dashboard/data/dashboard.json; then
+            echo "dashboard data unchanged — nothing to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/dashboard.json dashboard/data/dashboard.json
+          git commit -m "chore: refresh dashboard data (${{ inputs.cadence }} report) [skip ci]"
+          git pull --rebase --autostash
+          git push
+
+      - name: Upload the PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: halo-skin-${{ inputs.cadence }}-report
+          path: reports/*.pdf
+          if-no-files-found: error
+          retention-days: 90
