@@ -40,7 +40,9 @@ sudo apt-get install libpango-1.0-0 libpangoft2-1.0-0
 Then generate the sample reports (into `reports/`):
 
 ```bash
-uv run python -m meta_reporting.report   # or use the pipeline once wired (milestone 10)
+uv run halo-report weekly              # → reports/*.pdf + data/dashboard.json
+uv run halo-report monthly --as-of 2026-06-30
+uv run halo-report monthly --deliver   # also send via DELIVER_CHANNEL
 ```
 
 ## Configuration
@@ -68,7 +70,8 @@ you need:
 | 6. Transform — weekly acquisition topline, target-cohort capture (predicted + realized) | ✅ |
 | 7. Weekly PDF — operational report (Jinja + WeasyPrint, matplotlib charts) | ✅ |
 | 8. Monthly PDF — strategic deep-dive (cohort maturation, LTV:CAC, capture) | ✅ |
-| 9–10. Emit, delivery, pipeline wiring | ⬜ |
+| 9. `emit.py` (dashboard JSON) + `deliver.py` (Local / Drive / Email) | ✅ |
+| 10. `pipeline.py` — pull → transform → render → emit → deliver | ✅ |
 | 11. Next.js dashboard | ⬜ |
 | 12. GitHub Actions automation | ⬜ |
 | 13–14. Live API clients, README polish | ⬜ |

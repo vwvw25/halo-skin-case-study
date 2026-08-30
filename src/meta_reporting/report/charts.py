@@ -7,6 +7,7 @@ ink for structure, one teal accent, one amber for the "watch this" series.
 from __future__ import annotations
 
 import io
+from itertools import count
 
 import matplotlib
 
@@ -42,9 +43,14 @@ plt.rcParams.update(
 )
 
 
+_svg_counter = count()
+
+
 def _svg(fig: Figure) -> str:
     buf = io.StringIO()
-    fig.savefig(buf, format="svg", bbox_inches="tight", transparent=True)
+    # unique salt per chart so element ids don't collide when several SVGs share one HTML doc
+    with plt.rc_context({"svg.hashsalt": f"halo-{next(_svg_counter)}"}):
+        fig.savefig(buf, format="svg", bbox_inches="tight", transparent=True)
     plt.close(fig)
     return buf.getvalue()
 

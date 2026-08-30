@@ -26,6 +26,9 @@ yarn-error.log*
 # Generated reports (non-deterministic PDF timestamps); committed previews live in docs/
 reports/
 
+# Dashboard snapshots accumulate; data/dashboard.json is committed as the deploy source
+data/snapshots/
+
 # OS / editor
 .DS_Store
 .idea/
