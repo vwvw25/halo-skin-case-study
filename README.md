@@ -11,14 +11,15 @@ and produces:
 
 - a **weekly** operational PDF (spend, CAC, leading LTV indicators, tactical actions),
 - a **monthly** strategic PDF (cohort maturation, realized LTV:CAC by segment, budget moves),
-- an always-on **Next.js dashboard**.
+- an always-on **Next.js dashboard** → **[halo-skin-case-study.vercel.app](https://halo-skin-case-study.vercel.app)**.
 
 It is built against the real API contracts but ships with **mock data providers**, so it runs
 end to end with no credentials. Point it at a real ad account and Shopify store by setting a few
 environment variables. See [docs/data-sources.md](docs/data-sources.md) for how the
 mock/real seam works and what it does and doesn't guarantee.
 
-> **Status:** early build. See [PLAN.md](PLAN.md) for the full design and the milestone list.
+> **Status:** functional end to end (pipeline → PDFs → dashboard, all under CI). See
+> [PLAN.md](PLAN.md) for the design and remaining polish.
 
 ## Quick start
 
